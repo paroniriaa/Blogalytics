@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
+from django.utils.text import slugify
 import uuid
 # import uuid
 # Create your models here.
@@ -24,7 +25,13 @@ class Post(models.Model):
         ordering = ['-created_on']
 
     def __str__(self):
-        return self.title + "-" + self.post_id
+        return self.title
+        #return self.title + "-" + str(self.post_id)
+
+    def save(self, *args, **kwargs):
+        value = self.title
+        self.slug = slugify(value, allow_unicode=True)
+        super().save(*args, **kwargs)
 
     def get_absolute_url(self):
         return reverse('post_detail', kwargs={'slug': self.slug})

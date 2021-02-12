@@ -16,8 +16,11 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path, include
+from blog import views
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
     path('', include('blog.urls')),
+    path('<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),
+    #url(r'^<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),
 ]
