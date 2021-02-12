@@ -1,73 +1,49 @@
 {% extends "base.html" %} 
-
+{% load static %}
 {% block content %}
-    {% for post in post_list %}
-        <div class="post-preview">
-            <a href="{% url 'post_detail' post.slug %}">
-            <h2 class="post-title">
-                {{ post.title }}
-            </h2>
-            <h3 class="post-subtitle">
-                {{ post.content|slice:":200" }}
-            </h3>
-            </a>
-            <p class="post-meta">Posted by {{ post.author }} | {{ post.created_on }}</p>
-        </div>
-        <hr>
-    {% endfor %}
-
-        <!-- Pager -->
-        <div class="clearfix">
-        <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
-        </div>
-{% endblock %}
-
-<!--
-<style>
-    body {
-        font-family: "Roboto", sans-serif;
-        font-size: 18px;
-        background-color: #fdfdfd;
-    }
-    
-    .head_text {
-        color: white;
-    }
-    
-    .card {
-        box-shadow: 0 16px 48px #E3E7EB;
-    }
-</style>
-
-<header class="masthead">
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('{% static 'img/starrynight.jpg' %}')">
     <div class="overlay"></div>
     <div class="container">
-        <div class="row">
-            <div class=" col-md-8 col-md-10 mx-auto">
-                <div class="site-heading">
-                    <h3 class=" site-heading my-4 mt-3 text-white"> Lorem Ipsm </h3>
-                    <p class="text-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-                </div>
-            </div>
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Blogalytics</h1>
+            <span class="subheading">A blog analytic tools to helps you refine your work and discover beyond</span>
+          </div>
         </div>
+      </div>
     </div>
-</header>
-<div class="container">
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
     <div class="row">
-        // Blog Entries Column //
-        <div class="col-md-8 mt-3 left">
-            {% for post in post_list %}
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h2 class="card-title">{{ post.title }}</h2>
-                    <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} </p>
-                    <p class="card-text">{{post.content|slice:":200" }}</p>
-                    <a href="{% url 'post_detail' post.slug  %}" class="btn btn-primary">Read More &rarr;</a>
-                </div>
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="clearfix">
+            <a class="btn btn-primary float-right" href="http://127.0.0.1:8000/add_post/">New Post &rarr;</a>
             </div>
+            {% for post in post_list %}
+                <div class="post-preview">
+                    <a href="{% url 'post_detail' post.slug %}">
+                    <h2 class="post-title">
+                        {{ post.title }}
+                    </h2>
+                    <h3 class="post-subtitle">
+                        {{ post.content|slice:":200" }}
+                    </h3>
+                    </a>
+                    <p class="post-meta">Posted by {{ post.author }} | {{ post.created_on }}</p>
+                </div>
+                <hr>
             {% endfor %}
-        </div>
+        
+                <!-- Pager -->
+                <div class="clearfix">
+                <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+                </div>
+      </div>
     </div>
-</div>
--->
+  </div>
+
+{% endblock %}

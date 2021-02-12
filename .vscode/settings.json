@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "\\home\\tonyliao\\anaconda3\\envs\\blog\\bin\\python"
+    "python.pythonPath": "\\home\\tonyliao\\anaconda3\\envs\\blog\\bin\\python",
+    "FSharp.suggestGitignore": false
 }

@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
+  <title>Blogalytics</title>
 
   {% load static %}
 
@@ -52,31 +53,10 @@
     </div>
   </nav>
 
-  <!-- Page Header -->
-  <header class="masthead" style="background-image: url('{% static 'img/me.jpg' %}')">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="site-heading">
-            <h1>Blogalytics</h1>
-            <span class="subheading">A blog anlalitic tools to helps you refine your work and discover beyond</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
+  {% block content %}
 
-  <!-- Main Content -->
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-        {% block content %}
 
-        {% endblock %}
-      </div>
-    </div>
-  </div>
+  {% endblock %}
 
   <hr>
 
@@ -86,22 +66,6 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <ul class="list-inline text-center">
-            <li class="list-inline-item">
-              <a href="http://127.0.0.1:8000/">
-                <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a href="http://127.0.0.1:8000/">
-                <span class="fa-stack fa-lg">
-                  <i class="fas fa-circle fa-stack-2x"></i>
-                  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-                </span>
-              </a>
-            </li>
             <li class="list-inline-item">
               <a href="https://github.com/cs130-w21/15/tree/basic-platform">
                 <span class="fa-stack fa-lg">
