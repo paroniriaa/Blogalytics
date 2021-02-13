@@ -24,7 +24,7 @@
       <div class="col-lg-8 col-md-10 mx-auto">
         <h1>{% block title %} {{ object.title }} {% endblock title %}</h1>
         <p class=" text-muted">{{ post.author }} | {{ post.created_on }}</p>
-        <p class="card-text ">{{ object.content | safe }}</p>
+        <p class="card-text ">{{ object.content | linebreaks | safe }}</p>
       </div>
       </div>
     </div>
