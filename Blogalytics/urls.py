@@ -21,6 +21,7 @@ from blog import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('blog.urls')),
+    path('search/', views.SearchResultsView.as_view(), name='search_results'),
     path('<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),
     #url(r'^<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),
 ]

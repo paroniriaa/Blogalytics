@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views import generic
+from django.db.models import Q
 from .models import Post
 
 # Create your views here.
@@ -22,3 +23,15 @@ class AddPostView(generic.CreateView):
     model = Post
     fields = '__all__'
     template_name = 'add_post.html'
+
+class SearchResultsView(generic.ListView):
+    model = Post
+    template_name = 'search_results.html'
+
+    def get_queryset(self): 
+        query = self.request.GET.get('q')
+        post_list = Post.objects.filter(
+            Q(title__icontains=query) |
+            Q(content__icontains=query)
+        )
+        return post_list
