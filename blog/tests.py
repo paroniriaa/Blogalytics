@@ -17,7 +17,6 @@ def create_post(user, title, content):
 class PostModelTests(TestCase):
     @classmethod
     def setUpTestData(self):
-        print("setUp: Run once for every test method to setup clean data.")
         self.user = create_user()      
         self.post = create_post(title='test title', content="test content", user=self.user)
 
@@ -115,7 +114,6 @@ class PostPostListTests(TestCase):
 class PostPostDetailTests(TestCase):
     @classmethod
     def setUpTestData(self):
-        print("setUp: Run once for every test method to setup clean data.")
         self.user = create_user()      
         self.post = create_post(title='test title', content="test content", user=self.user)
 
