@@ -24,6 +24,10 @@ class AddPostView(generic.CreateView):
     fields = '__all__'
     template_name = 'add_post.html'
 
+class AboutView(generic.ListView):
+    model = Post
+    template_name = 'about.html'
+
 class SearchResultsView(generic.ListView):
     model = Post
     template_name = 'search_results.html'
