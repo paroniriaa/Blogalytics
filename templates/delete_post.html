@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Edit Post{% endblock %}
+{% block content %}
+
+<h1>Delete Post</h1>
+<br/><br/>
+<h3>Delete: {{ post.title }}</h3>
+
+<form method="POST">
+    {% csrf_token %}
+    <strong>Are you sure?</strong>
+    <button class='btn btn-primary'>Delete</button>
+</form>
+
+{% endblock content %}

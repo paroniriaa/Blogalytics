@@ -39,8 +39,14 @@
                 <div class="card-body">
                     <h2 class="card-title">{{ post.title }}</h2>
                     <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} </p>
-                    <p class="card-text">{{post.content|slice:":200" }}</p>
+                    <p class="card-text">{{post.snippet|slice:":200" }}...</p>
+                    <!-- <p class="card-text">{{post.content|slice:":200" }}...</p> -->
                     <a href="{% url 'post_detail' post.slug  %}" class="btn btn-primary">Read More &rarr;</a>
+
+                    {% if user.is_authenticated and user.id == post.author.id %}
+                            <a href="{% url 'update_post' post.slug  %}" class="btn btn-primary">Edit &rarr;</a>
+                            <a href="{% url 'delete_post' post.slug  %}" class="btn btn-primary">Delete &rarr;</a>
+                    {% endif %}
                 </div>
             </div>
             {% endfor %}

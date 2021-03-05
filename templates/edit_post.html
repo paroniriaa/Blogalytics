@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
-
+{% block title %}Edit Post{% endblock %}
 {% block content %}
 
-<h1>Add Blog Post</h1>
+<h1>Edit Blog Post</h1>
 
 <div class="form-group">
-    <form method="POST" enctype="multipart/form-data">
+    <form method="POST">
         {% csrf_token %}
         {{ form.media }}
         {{ form.as_p }}
-        <button class='btn btn-primary'>Post</button>
+        <button class='btn btn-primary'>Update</button>
     </form>
 </div>
 {% endblock content %}
