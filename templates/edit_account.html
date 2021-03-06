@@ -8,7 +8,7 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="page-heading">
-            <h1>Profile Editing</h1>
+            <h1>Account Editing</h1>
             <span class="subheading">Want to Change? As you wish.</span>
           </div>
         </div>
@@ -20,7 +20,7 @@
     <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
-            <p>Want to change your profile? Fill out the form below then you are all set!</p>
+            <p>Want to change your account? Change the section you like and update then you are all set!</p>
             <form method="POST" enctype="multipart/form-data" id="profile_form" novalidate>
                 {% csrf_token %}
                 <!-- {{ form.as_p }}         -->
@@ -40,7 +40,7 @@
                 <br>
                 <div class="control-group">
                     <div class="form-group floating-label-form-group controls">
-                    <label for="id_content">Last Name</label> 
+                    <label for="id_last_name">Last Name</label> 
                     {{ user_form.last_name }}
                     </div>
                 </div>
@@ -54,16 +54,18 @@
                 <br>
                 <div class="control-group">
                     <div class="form-group floating-label-form-group controls">
-                    <label for="id_emial">Bio</label> 
+                    <label for="id_bio">Bio</label> 
                     {{ profile_form.bio }}
                     </div>
                 </div>
                 <br>
                 <div class="control-group">
-                    <div class="form-group floating-label-form-group controls">
-                    <label for="id_emial">Profile Pic</label> 
+                    <label for="id_profile_pic">Profile Picture</label> 
+                    <br>
+                    <img src="{{user.profile.profile_pic.url}}" width="100" height="100">
+                    <br>
+                    <br>
                     {{ profile_form.profile_pic }}
-                    </div>
                 </div>
                 <br>
                 <div class="clearfix">

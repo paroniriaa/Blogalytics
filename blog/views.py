@@ -19,7 +19,7 @@ def LikeView(request, slug):
 
 @login_required
 @transaction.atomic
-def update_profile(request, id):
+def edit_account(request, id):
     if request.method == 'POST':
         user_form = EditProfileForm(request.POST, instance=request.user)
         profile_form = forms.EditProfilePageForm(request.POST, instance=request.user.profile)
@@ -33,7 +33,7 @@ def update_profile(request, id):
     else:
         user_form = EditProfileForm(instance=request.user)
         profile_form = forms.EditProfilePageForm(instance=request.user.profile)
-    return render(request, 'edit_profile_page.html', {
+    return render(request, 'edit_account.html', {
         'user_form': user_form,
         'profile_form': profile_form
     })
@@ -74,7 +74,7 @@ class DeletePostView(generic.DeleteView):
 
 class ProfileView(generic.DetailView):
     model = Profile
-    template_name = 'user_profile.html'
+    template_name = 'profile.html'
 
     def get_context_data(self, *args, **kwargs):
         users = Profile.objects.all()

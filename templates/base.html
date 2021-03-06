@@ -57,10 +57,13 @@
               <li class="nav-item">
                   <a class="nav-link" href="{% url 'add_post' %}">Add Post</a>
               </li>
-              <li class="nav-item text-black">
-                  <a class="nav-link" href="{% url 'edit_profile' user.profile.id%}">Profile</a>
+              <li class="nav-item">
+                  <a class="nav-link" href="{% url 'edit_account' user.profile.id%}">Account</a>
               </li>
-              <li class="nav-item text-black">
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'profile' user.profile.id%}">Profile</a>
+              </li>
+              <li class="nav-item">
                   <a class="nav-link" href="{% url 'logout' %}">Logout</a>
               </li>
           {% else %}
