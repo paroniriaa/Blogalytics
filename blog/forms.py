@@ -1,5 +1,5 @@
 from django import forms
-from .models import Post
+from .models import Post, Profile
 
 class PostForm(forms.ModelForm):
     class Meta:
@@ -22,3 +22,8 @@ class EditForm(forms.ModelForm):
             'content': forms.Textarea(attrs={'class': 'form-control'}),
          #   'snippet': forms.Textarea(attrs={'class': 'form-control'}),
         }
+
+class EditProfilePageForm(forms.ModelForm):
+    class Meta:
+        model = Profile
+        fields = ['bio', 'profile_pic',]

@@ -58,7 +58,7 @@
                   <a class="nav-link" href="{% url 'add_post' %}">Add Post</a>
               </li>
               <li class="nav-item text-black">
-                  <a class="nav-link" href="{% url 'edit_profile' %}">Profile</a>
+                  <a class="nav-link" href="{% url 'edit_profile' user.profile.id%}">Profile</a>
               </li>
               <li class="nav-item text-black">
                   <a class="nav-link" href="{% url 'logout' %}">Logout</a>

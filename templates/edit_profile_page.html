@@ -23,29 +23,46 @@
             <p>Want to change your profile? Fill out the form below then you are all set!</p>
             <form method="POST" enctype="multipart/form-data" id="profile_form" novalidate>
                 {% csrf_token %}
-                {{ form.as_p }}        
+                <!-- {{ form.as_p }}         -->
                 <div class="control-group">
                     <div class="form-group floating-label-form-group controls">
                     <label for="id_username">Username</label>
-                    {{ form.username }}
+                    {{ user_form.username }}
                     </div>
                 </div>
+                <br>
                 <div class="control-group">
                     <div class="form-group floating-label-form-group controls">
                     <label for="id_firstname">First Name</label> 
-                    {{ form.first_name }}
+                    {{ user_form.first_name }}
                     </div>
                 </div>
+                <br>
                 <div class="control-group">
                     <div class="form-group floating-label-form-group controls">
                     <label for="id_content">Last Name</label> 
-                    {{ form.last_name }}
+                    {{ user_form.last_name }}
                     </div>
                 </div>
+                <br>
                 <div class="control-group">
                     <div class="form-group floating-label-form-group controls">
                     <label for="id_emial">Email</label> 
-                    {{ form.email }}
+                    {{ user_form.email }}
+                    </div>
+                </div>
+                <br>
+                <div class="control-group">
+                    <div class="form-group floating-label-form-group controls">
+                    <label for="id_emial">Bio</label> 
+                    {{ profile_form.bio }}
+                    </div>
+                </div>
+                <br>
+                <div class="control-group">
+                    <div class="form-group floating-label-form-group controls">
+                    <label for="id_emial">Profile Pic</label> 
+                    {{ profile_form.profile_pic }}
                     </div>
                 </div>
                 <br>
