@@ -1,13 +1,45 @@
-{% extends 'base.html' %}
-{% block title %}Login{% endblock %}
+{% extends "base.html" %}
+{% load static %}
 {% block content %}
+  <!-- Page Header -->
+<header class="masthead" style="background-image: url('{% static 'img/starrynight.jpg' %}')">
+<div class="overlay"></div>
+<div class="container">
+    <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="page-heading">
+        <h1>Log In</h1>
+        <span class="subheading">Good to see you back! Make youself at home.</span>
+        </div>
+    </div>
+    </div>
+</div>
+</header>
 
-<h1>Login</h1>
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+        <form method="POST" enctype="multipart/form-data" id="profile_form" novalidate>
+            {% csrf_token %}        
+            <div class="control-group">
+                <div class="form-group floating-label-form-group controls">
+                <label for="id_username">Username</label>
+                {{ form.username }}
+            </div>
+            <div class="control-group">
+                <div class="form-group floating-label-form-group controls">
+                <label for="id_slug">Password</label> 
+                {{ form.password }}
+                </div>
+            </div>
+            <br>
+            <div class="clearfix">
+                <a class="btn btn-primary float-left" href="http://127.0.0.1:8000">Cancel</a>
+                <button class='btn btn-primary float-right'>Post</button>
+            </div>
+        </form>
+    </div>
+</div>
 
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button class='btn btn-primary'>Login</button>
-</form>
-
-{% endblock content %}
+{% endblock %}
