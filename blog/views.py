@@ -9,6 +9,7 @@ from django.db.models import Q
 # Create your views here.
 def LikeView(request, slug):
     post = get_object_or_404(Post, id=request.POST.get('post_id'))
+    print("Post:", post)
     post.likes.add(request.user)
     return HttpResponseRedirect(reverse('post_detail', args=[str(slug)]))
 

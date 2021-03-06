@@ -24,9 +24,15 @@
       <div class="col-lg-8 col-md-10 mx-auto">
         <h1>{% block title %} {{ post.title }} {% endblock title %}</h1>
         <p class=" text-muted">{{ post.author }} | {{ post.created_on }}</p>
-        <p class="card-text ">{{ post.content | linebreaks | safe }}</p>
+        <p class="card-text ">{{ post.content | safe }}</p>
       </div>
     </div>
   </div>
+  <form action="{% url 'like_post' post.slug %}" method="POST">
+    {% csrf_token %}
+    <button type="submit", name="post_id", value="{{ post.id }}", class="btn btn-primary btn-sm">
+      Like {{ total_likes }}
+    </button>
+  </form>
 
 {% endblock %}
