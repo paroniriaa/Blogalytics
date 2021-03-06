@@ -4,6 +4,7 @@ from .models import Post, Profile
 from . import forms
 from django.urls import reverse_lazy, reverse
 from django.http import HttpResponseRedirect
+from django.db.models import Q
 
 # Create your views here.
 def LikeView(request, slug):
@@ -11,11 +12,15 @@ def LikeView(request, slug):
     post.likes.add(request.user)
     return HttpResponseRedirect(reverse('post_detail', args=[str(slug)]))
 
+def index(request):
+    post_list = Post.objects.filter(status=1).order_by('-created_on')
+    return render(request, 'index.html', {'post_list':post_list})
+
 class PostList(generic.ListView):
     queryset = Post.objects.order_by('-created_on')
     context = {'post_list': queryset}
     template_name = 'index.html'
-
+    
 class PostDetail(generic.DetailView):
     model = Post
     template_name = 'post_detail.html'
@@ -58,3 +63,19 @@ class EditProfilePageView(generic.UpdateView):
     model = Profile
     template_name = 'edit_profile_page.html'
     fields = ['bio', 'profile_pic',]
+
+class AboutView(generic.ListView):
+    model = Post
+    template_name = 'about.html'
+
+class SearchResultsView(generic.ListView):
+    model = Post
+    template_name = 'search_results.html'
+
+    def get_queryset(self): 
+        query = self.request.GET.get('q')
+        post_list = Post.objects.filter(
+            Q(title__icontains=query) |
+            Q(content__icontains=query)
+        )
+        return post_list

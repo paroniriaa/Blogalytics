@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.urls import reverse
 from ckeditor.fields import RichTextField
 from django.db.models.signals import post_save
+from django.utils.text import slugify
 import uuid
 # import uuid
 # Create your models here.
@@ -28,6 +29,11 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title + "-" + self.post_id.urn
+
+    def save(self, *args, **kwargs):
+        value = self.title
+        self.slug = slugify(value, allow_unicode=True)
+        super().save(*args, **kwargs)
 
     def get_absolute_url(self):
         return reverse('post_detail', kwargs={'slug': self.slug})

@@ -1,32 +1,32 @@
-{% extends 'base.html' %}
-{% load static %} 
+{% extends 'base.html' %} 
+
+{% load static %}
 {% block content %}
 
-<!-- {{ post.author.profile }} -->
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('{% static 'img/starrynight.jpg' %}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Blogalytics</h1>
+            <span class="subheading">A blog analytic tools to helps you refine your work and discover beyond</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-8 card mb-4  mt-3 left  top">
-      <div class="card-body">
-        <h1>{% block title %} {{ object.title }} {% endblock title %}</h1>
-        
-        <!-- {% if post.author.profile.profile_pic.url %}
-        <p class=" text-muted"><img src="{{post.author.profile.profile_pic.url}}" width="25" height="25" style="vertical-align:middle" class='rounded-circle'> <a href="{% url 'show_profile' post.author.profile.id %}">{{ post.author }}</a> | {{ post.created_on }}</p>
-        {% else %}
-        <p class=" text-muted"><img src="{% static 'Blogalytics\images\default_profile_pic.png' %}" width="25" height="25" style="vertical-align:middle" class='rounded-circle'> <a href="{% url 'show_profile' post.author.profile.id %}">{{ post.author }}</a> | {{ post.created_on }}</p>
-        {% endif %} -->
-        <p class="card-text ">{{ object.content | safe }}</p>
-        <br/><br/>
-        <br/><br/>
-        <form action="{% url 'like_post' post.slug %}" method="POST">
-          {% csrf_token %}
-          <button type="submit", name="post_id", value="{{ post.id }}", class="btn btn-primary btn-sm">
-            Like 
-          </button> - {{ total_likes }} Likes
-        </form>
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <h1>{% block title %} {{ post.title }} {% endblock title %}</h1>
+        <p class=" text-muted">{{ post.author }} | {{ post.created_on }}</p>
+        <p class="card-text ">{{ post.content | linebreaks | safe }}</p>
       </div>
     </div>
   </div>
-</div>
 
-{% endblock content %}
+{% endblock %}
