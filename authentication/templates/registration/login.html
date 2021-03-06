@@ -8,8 +8,8 @@
     <div class="row">
     <div class="col-lg-8 col-md-10 mx-auto">
         <div class="page-heading">
-        <h1>Log In</h1>
-        <span class="subheading">Good to see you back! Make youself at home.</span>
+        <h1>Login</h1>
+        <span class="subheading">Good to see you back! Any new stories that you want to share?.</span>
         </div>
     </div>
     </div>
@@ -20,7 +20,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-        <form method="POST" enctype="multipart/form-data" id="profile_form" novalidate>
+        <form method="POST" enctype="multipart/form-data" id="login_form" novalidate>
             {% csrf_token %}        
             <div class="control-group">
                 <div class="form-group floating-label-form-group controls">
@@ -29,17 +29,23 @@
             </div>
             <div class="control-group">
                 <div class="form-group floating-label-form-group controls">
-                <label for="id_slug">Password</label> 
+                <label for="id_password">Password</label> 
                 {{ form.password }}
                 </div>
             </div>
             <br>
             <div class="clearfix">
-                <a class="btn btn-primary float-left" href="http://127.0.0.1:8000">Cancel</a>
-                <button class='btn btn-primary float-right'>Post</button>
+                <a class="btn btn-primary float-left" href="{% url 'home' %}">Cancel</a>
+                <button class='btn btn-primary float-right'>Login</button>
             </div>
         </form>
+        </div>
     </div>
 </div>
+
+<script>
+    document.getElementById("id_username").placeholder = "Username";
+    document.getElementById("id_password").placeholder = "Password";
+</script>
 
 {% endblock %}

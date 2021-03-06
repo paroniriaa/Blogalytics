@@ -20,13 +20,12 @@
     <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
-            <p>Please fill out each section below following the given instructions</p>
-            <form method="POST" enctype="multipart/form-data" id="profile_form" novalidate>
+            <p>Please fill out each section below and click on the register buttom to complete your account registration</p>
+            <form method="POST" enctype="multipart/form-data" id="register_form" novalidate>
                 {% csrf_token %}        
                 <div class="control-group">
                     <div class="form-group floating-label-form-group controls">
                     <label for="id_username">Username</label>
-                    <input type="text" class="form-control" placeholder="Username" name="title" maxlength="200" required id="id_username">
                     {{ form.username }}
                     </div>
                 </div>
@@ -38,7 +37,7 @@
                 </div>
                 <div class="control-group">
                     <div class="form-group floating-label-form-group controls">
-                    <label for="id_content">Last Name</label> 
+                    <label for="id_last_name">Last Name</label> 
                     {{ form.last_name }}
                     </div>
                 </div>
@@ -50,24 +49,29 @@
                 </div>
                 <div class="control-group">
                     <div class="form-group floating-label-form-group controls">
-                    <label for="id_emial">Password</label> 
+                    <label for="id_password1">Password</label> 
                     {{ form.password1 }}
                     </div>
                 </div>
                 <div class="control-group">
                     <div class="form-group floating-label-form-group controls">
-                    <label for="id_emial">Password Confirm</label> 
+                    <label for="id_password2">Password Confirmation</label> 
                     {{ form.password2 }}
                     </div>
                 </div>
                 <br>
                 <div class="clearfix">
                     <a class="btn btn-primary float-left" href="{% url 'home' %}">Cancel</a>
-                    <button class='btn btn-primary float-right'>Update</button>
+                    <button class='btn btn-primary float-right'>Register</button>
                 </div>
             </form>
         </div>
     </div>
   </div>
+
+  <script>
+      document.getElementById("id_password1").placeholder = "Password";
+      document.getElementById("id_password2").placeholder = "Password Confirmation";
+  </script>
 
 {% endblock %}
