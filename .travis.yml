@@ -1,5 +1,9 @@
 language: python
 
+branches:
+  only:
+    - basic-platform
+
 python:
         - '3.8'
         
