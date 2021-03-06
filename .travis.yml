@@ -10,5 +10,3 @@ install:
 script:
         - echo 'Run basic test'
         - python manage.py test -v 2
-        - echo 'Run NLP test'
-        - python manage.py test nlp
