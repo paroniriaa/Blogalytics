@@ -7,8 +7,8 @@ class SignupForm(UserCreationForm):
     first_name = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'type': "text", 'placeholder': "First Name", 'name': "firstname", 'maxlength': "100",  'id': "id_first_name"}))
     last_name = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'type': "text", 'placeholder': "Last Name", 'name': "lastname", 'maxlength': "100",  'id': "id_last_name"}))
     email = forms.EmailField(widget=forms.EmailInput(attrs={'class': 'form-control', 'type': "email", 'placeholder': "Email", 'name': "email", 'maxlength': "100", 'required': True, 'id': "id_email"}))
-    new_password1 = forms.CharField(max_length=100, widget=forms.PasswordInput(attrs={'class': 'form-control', 'type':'password', 'placeholder': "Password", 'name': "new password", 'maxlength': "100", 'required': True, 'id': "id_new_password1"}))
-    new_password2 = forms.CharField(max_length=100, widget=forms.PasswordInput(attrs={'class': 'form-control', 'type':'password', 'placeholder': "Password Confirmation", 'name': "new password confirmation", 'maxlength': "100", 'required': True, 'id': "id_new_password2"}))
+    password1 = forms.CharField(max_length=100, widget=forms.PasswordInput(attrs={'class': 'form-control', 'type':'password', 'placeholder': "Password", 'name': "new password", 'maxlength': "100", 'required': True, 'id': "id_new_password1"}))
+    password2 = forms.CharField(max_length=100, widget=forms.PasswordInput(attrs={'class': 'form-control', 'type':'password', 'placeholder': "Password Confirmation", 'name': "new password confirmation", 'maxlength': "100", 'required': True, 'id': "id_new_password2"}))
 
     class Meta:
         model = User
@@ -16,11 +16,7 @@ class SignupForm(UserCreationForm):
     
     def __init__(self, *args, **kwargs):
         super(SignupForm, self).__init__(*args, **kwargs)
-
-        self.fields['username'].widget.attrs['class'] = 'form-control'
-        self.fields['password1'].widget.attrs['class'] = 'form-control'
-        self.fields['password2'].widget.attrs['class'] = 'form-control'
-
+        
 class EditProfileForm(UserChangeForm):
     username = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'type': "text", 'placeholder': "Username", 'name': "username", 'maxlength': "100",  'id': "id_username"}))
     email = forms.EmailField(widget=forms.EmailInput(attrs={'class': 'form-control', 'type': "email", 'placeholder': "Email", 'name': "email", 'maxlength': "100", 'required': True, 'id': "id_email"}))
