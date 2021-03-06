@@ -36,7 +36,7 @@
           </p>
         {% endif %}
         <!-- <p class=" text-muted">{{ post.author }} | {{ post.created_on }}</p> -->
-        <p class="card-text ">{{ post.content | safe }}</p>
+        <p class="card-text ">{{ post.content | linebreaks | safe }}</p>
         <br>
         <br>
         <form action="{% url 'like_post' post.slug %}" method="POST">
