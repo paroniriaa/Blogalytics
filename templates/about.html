@@ -1,0 +1,51 @@
+{% extends 'base.html' %} 
+
+{% load static %}
+{% block content %}
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('{% static 'img/starrynight.jpg' %}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>About</h1>
+            <span class="subheading">About blogalytics, about you.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <h1>{% block title %} Hey there! {% endblock title %}</h1>
+        <p class="text-muted">A letter from blogalytics developers</p>
+        <p class="card-text ">
+           As you have already known, Blogalytics is a blog platform. Yet it is no ordinary blog platform because 
+           we have intergrated powerful analytic tools like machine learning word cloud image and user behavier tracing!
+        </p>
+        <p class="card-text ">          
+           Empower by the word cloud, which can generate an unique image from your post that contains keywords, would 
+           efficently help your reader to understand the overall messages that you tried to deliver through your 
+           post. Of course, you can use it to discover the post that you like without reading them one by one and 
+           paragraph by paragraph, isn't it cool?
+        </p>
+        <p class="card-text ">
+           Along with the visulazation of the user behavier tracing tool, you can now easily analysis which part of your post 
+           interest your readers the most, so you can come up with a better idea when revising your content to improve 
+           your writting skill or add new chapter that is more likely to acctract your readers, isnt't it fun?
+        </p>
+        <p class="card-text ">
+           Now you might have realized that blogalytics isn't just about blog, but more about you. We hope you enjoy 
+           hanging around here and discover more about yourself. Let us cling together and discover beyound :D.
+        </p>
+      </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

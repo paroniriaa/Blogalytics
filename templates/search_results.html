@@ -1,0 +1,60 @@
+{% extends "base.html" %} 
+{% load static %}
+{% block content %}
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('{% static 'img/starrynight.jpg' %}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Blogalytics</h1>
+            <span class="subheading">A blog analytic tools to helps you refine your work and discover beyond</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">     
+        <div class="clearfix">
+            <a class="btn btn-primary float-right" href="http://127.0.0.1:8000/add_post/">New Post &rarr;</a>
+            </div>
+              {% if post_list %}
+                {% for post in post_list %}
+                  <div class="post-preview">
+                      <a href="{% url 'post_detail' post.slug %}">
+                      <h2 class="post-title">
+                          {{ post.title }}
+                      </h2>
+                      <h3 class="post-subtitle">
+                          {{ post.content|slice:":200" }}
+                      </h3>
+                      </a>
+                      <p class="post-meta">Posted by {{ post.author }} | {{ post.created_on }}</p>
+                  </div>
+                  <hr>
+                {% endfor %}
+              {% else %}
+                <div class="post-preview">
+                  <h2 class="post-title">
+                      Ops!
+                  </h2>
+                  <p class="post-subtitle">
+                      It seems like there were no post could match with your searching keyword, maybe try searching something else?
+                  </p>
+                </div>
+                <hr>            
+              {% endif %}  
+        <!-- Pager -->
+        <div class="clearfix">
+        <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
