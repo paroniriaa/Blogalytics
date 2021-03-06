@@ -24,13 +24,13 @@
         <h1>{% block title %} {{ post.title }} {% endblock title %}</h1>
         {% if post.author.profile.profile_pic %}
           <p class=" text-muted">
-            <img src="{{post.author.profile.profile_pic.url}}" width="25" height="25" style="vertical-align:middle" class='rounded-circle'>
+            <a href="{% url 'show_profile' post.author.profile.id %}"><img src="{{post.author.profile.profile_pic.url}}" width="30" height="30" style="vertical-align:middle" class='rounded-circle'></a>
             <a href="{% url 'show_profile' post.author.id %}" style="text-decoration:none"> {{ post.author }} </a>
             {{ post.created_on }}
           </p>
         {% else %} 
           <p class=" text-muted">
-            <img src="{% static 'Blogalytics\images\default_profile_pic.png' %}" width="25" height="25" style="vertical-align:middle" class='rounded-circle'> 
+            <a href="{% url 'show_profile' post.author.profile.id %}"><img src="{% static 'Blogalytics\images\default_profile_pic.png' %}" width="30" height="30" style="vertical-align:middle" class='rounded-circle'></a>
             <a href="{% url 'show_profile' post.author.id %}" style="text-decoration:none"> {{ post.author }} </a>
             {{ post.created_on }}
           </p>
