@@ -18,17 +18,19 @@ class SignupForm(UserCreationForm):
         self.fields['password2'].widget.attrs['class'] = 'form-control'
 
 class EditProfileForm(UserChangeForm):
-    email = forms.EmailField(widget=forms.EmailInput(attrs={'class': 'form-control'}))
-    first_name = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control'}))
-    last_name = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control'}))
+    email = forms.EmailField(widget=forms.EmailInput(attrs={'class': 'form-control', 'type': "email", 'placeholder': "Email", 'name': "email", 'maxlength': "100", 'required': True, 'id': "id_email"}))
+    first_name = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'type': "text", 'placeholder': "First Name", 'name': "firstname", 'maxlength': "100",  'id': "id_first_name"}))
+    last_name = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'type': "text", 'placeholder': "Last Name", 'name': "lastname", 'maxlength': "100",  'id': "id_last_name"}))
+    
     class Meta:
         model = User
-        fields = ('username', 'first_name', 'last_name', 'email', 'password')
+        fields = ['username', 'first_name', 'last_name', 'email', 'password']
+
 
 class ChangePasswordForm(PasswordChangeForm):
-    old_password = forms.CharField(max_length=100, widget=forms.PasswordInput(attrs={'class': 'form-control', 'type':'password'}))
-    new_password1 = forms.CharField(max_length=100, widget=forms.PasswordInput(attrs={'class': 'form-control', 'type':'password'}))
-    new_password2 = forms.CharField(max_length=100, widget=forms.PasswordInput(attrs={'class': 'form-control', 'type':'password'}))
+    old_password = forms.CharField(max_length=100, widget=forms.PasswordInput(attrs={'class': 'form-control', 'type':'password', 'placeholder': "Current Password", 'name': "current password", 'maxlength': "100", 'required': True, 'id': "current_password"}))
+    new_password1 = forms.CharField(max_length=100, widget=forms.PasswordInput(attrs={'class': 'form-control', 'type':'password', 'placeholder': "New Password", 'name': "new password", 'maxlength': "100", 'required': True, 'id': "new_password"}))
+    new_password2 = forms.CharField(max_length=100, widget=forms.PasswordInput(attrs={'class': 'form-control', 'type':'password', 'placeholder': "New Password (again)", 'name': "new password (again)", 'maxlength': "100", 'required': True, 'id': "new_password_again"}))
     class Meta:
         model = User
         fields = ('old_password', 'new_password1', 'new_password2',)

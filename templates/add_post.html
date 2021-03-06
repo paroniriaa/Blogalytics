@@ -21,7 +21,7 @@
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
             <p>Want to post your work? Fill out the form below then you are all set!</p>
-            <form method="POST" id="post_form" novalidate>
+            <form method="POST" enctype="multipart/form-data" id="post_form" novalidate >
                 {% csrf_token %}
                 {{ form.media }}         
                 <div class="control-group">

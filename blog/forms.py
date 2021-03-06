@@ -11,7 +11,6 @@ class PostForm(forms.ModelForm):
            # 'snippet': forms.TextInput(attrs={'class': 'form-control', 'type': "text", 'placeholder': "Snippet", 'name': "snippet", 'maxlength': "200", 'id': "id_snippet"}),
             'author': forms.Select(attrs={'class': 'form-control', 'placeholder': "Author", 'name': "author", 'required': True, 'id': "id_author"}),
             'content': forms.Textarea(attrs={'rows': "5", 'class': "form-control", 'placeholder': "Content", 'name': "content",  'required': True, 'id': "id_content"}),
-
         }
 
 class EditForm(forms.ModelForm):
