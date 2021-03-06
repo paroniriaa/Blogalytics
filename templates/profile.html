@@ -9,8 +9,8 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="page-heading">
-            <h1>Your Profile</h1>
-            <span class="subheading">Want to Change? Looking forward to read more </span>
+            <h1>{{ page_user.user.username }}'s Profile</h1>
+            <span class="subheading">{{ page_user.bio }}</span>
           </div>
         </div>
       </div>
@@ -18,31 +18,15 @@
   </header>
 
   <!-- Main Content -->
-<div class="card mb-3" style="max-width: 540px;">
-    <div class="row no-gutters">
-      <div class="col-md-4">
-        {% if page_user.profile.profile_pic.url %}
-        <img src="{{page_user.profile.profile_pic.url}}" class='rounded-circle'> 
-        <!--<a href="{% url 'show_profile' page_user.profile.id %}">-->
-        {% else %}
-        <img src="{% static 'Blogalytics\images\default_profile_pic.png' %}" class='rounded-circle'>
-        {% endif %}
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <p class="card-title">{{ page_user.user.first_name }} {{ page_user.user.last_name }}</p>
-          <p class="card-text">{{ page_user.bio }}</p>
-        </div>
-      </div>
-    </div>
-</div>
-
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
-        <div class="clearfix">
-            <a class="btn btn-primary float-right" href="{% url 'add_post' %}">New Post &rarr;</a>
-            </div>
+            {% if page_user.profile_pic %}
+            <img src="{{page_user.profile_pic.url}}" class='rounded-circle' width="200" height="200"> 
+            {% else %}
+            <img src="{% static 'Blogalytics\images\default_profile_pic.png' %}" class='rounded-circle' width="200" height="200">
+            {% endif %}
+           <!-- <p >{{ page_user.user.first_name }} {{ page_user.user.last_name }}</p>-->
             {% if post_list %}
               {% for post in post_list %}
                   <div class="post-preview">
@@ -54,12 +38,12 @@
                           {{ post.content | slice:":200"}}
                       </h3>
                       </a>
-                      <p class="post-meta">Posted by {{ post.author }} | {{ post.created_on }}</p>
+                      <p class="post-meta">Posted by {{ post.author }}, {{ post.created_on }}</p>
                       {% if user.is_authenticated and user.id == post.author.id %}
                       <div class="clearfix">
                         <a href="{% url 'update_post' post.slug  %}" class="btn btn-primary">Edit</a>
                         <a href="{% url 'delete_post' post.slug  %}" class="btn btn-primary">Delete</a>                       
-                    </div>
+                      </div>
                       {% endif %}
                   </div>
                   <hr>

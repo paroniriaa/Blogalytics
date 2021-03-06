@@ -1,15 +1,49 @@
-{% extends 'base.html' %}
-{% block title %}Edit Post{% endblock %}
+{% extends "base.html" %}
+{% load static %}
 {% block content %}
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('{% static 'img/starrynight.jpg' %}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>Post Revising</h1>
+            <span class="subheading">Want to revise? We got you.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <p>Want to revise your work? Change the content on the section you like and update then you are all set!</p>
+            <form method="POST" enctype="multipart/form-data" id="post_form" novalidate >
+                {% csrf_token %}
+                {{ form.media }}         
+                <div class="control-group">
+                    <div class="form-group floating-label-form-group controls">
+                    <label for="id_title">Title</label>
+                    {{ form.title }}
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="form-group floating-label-form-group controls">
+                    <label for="id_content">Content</label> 
+                    {{ form.content }}
+                    </div>
+                </div>
+                <br>
+                <div class="clearfix">
+                    <a class="btn btn-primary float-left" href="{% url 'home' %}">Cancel</a>
+                    <button class='btn btn-primary float-right'>Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+  </div>
 
-<h1>Edit Blog Post</h1>
-
-<div class="form-group">
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.media }}
-        {{ form.as_p }}
-        <button class='btn btn-primary'>Update</button>
-    </form>
-</div>
-{% endblock content %}
+{% endblock %}

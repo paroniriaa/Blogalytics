@@ -7,8 +7,8 @@ class SignupForm(UserCreationForm):
     first_name = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'type': "text", 'placeholder': "First Name", 'name': "firstname", 'maxlength': "100",  'id': "id_first_name"}))
     last_name = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'form-control', 'type': "text", 'placeholder': "Last Name", 'name': "lastname", 'maxlength': "100",  'id': "id_last_name"}))
     email = forms.EmailField(widget=forms.EmailInput(attrs={'class': 'form-control', 'type': "email", 'placeholder': "Email", 'name': "email", 'maxlength': "100", 'required': True, 'id': "id_email"}))
-    password1 = forms.CharField(max_length=100, widget=forms.PasswordInput(attrs={'class': 'form-control', 'type':'password', 'placeholder': "Password", 'name': "new password", 'maxlength': "100", 'required': True, 'id': "id_new_password1"}))
-    password2 = forms.CharField(max_length=100, widget=forms.PasswordInput(attrs={'class': 'form-control', 'type':'password', 'placeholder': "Password Confirmation", 'name': "new password confirmation", 'maxlength': "100", 'required': True, 'id': "id_new_password2"}))
+    password1 = forms.CharField(max_length=100, widget=forms.PasswordInput(attrs={'class': 'form-control', 'type':'password', 'placeholder': "Password", 'name': "password", 'maxlength': "100", 'required': True, 'id': "id_password1"}))
+    password2 = forms.CharField(max_length=100, widget=forms.PasswordInput(attrs={'class': 'form-control', 'type':'password', 'placeholder': "Password Confirmation", 'name': "password confirmation", 'maxlength': "100", 'required': True, 'id': "id_password2"}))
 
     class Meta:
         model = User
