@@ -4,6 +4,7 @@ from django.urls import reverse
 from ckeditor.fields import RichTextField
 from django.db.models.signals import post_save
 from django.utils.text import slugify
+from django.dispatch import receiver
 import uuid
 # import uuid
 # Create your models here.
@@ -43,11 +44,14 @@ class Profile(models.Model):
     bio = models.TextField(null=True, default="This user has not written anything here.")
     profile_pic = models.ImageField(null=True, blank=True, upload_to='images/profile', default=None)
     
+    @receiver(post_save, sender=User)
     def create_user_profile(sender, instance, created, **kwargs):
         if created:
             Profile.objects.create(user=instance)
-
-    post_save.connect(create_user_profile, sender=User)
+    
+    @receiver(post_save, sender=User)
+    def save_user_profile(sender, instance, **kwargs):
+        instance.profile.save()
 
     def __str__(self):
         return str(self.user)

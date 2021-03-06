@@ -2,10 +2,13 @@ from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from .models import Post, Profile
 from . import forms
+from authentication.forms import EditProfileForm
 from django.urls import reverse_lazy, reverse
 from django.http import HttpResponseRedirect
 from django.db.models import Q
 from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
+from django.db import transaction
 
 # Create your views here.
 def LikeView(request, slug):
@@ -13,6 +16,27 @@ def LikeView(request, slug):
     post.likes.add(request.user)
 
     return HttpResponseRedirect(reverse('post_detail', args=[str(slug)]))
+
+@login_required
+@transaction.atomic
+def update_profile(request, id):
+    if request.method == 'POST':
+        user_form = EditProfileForm(request.POST, instance=request.user)
+        profile_form = forms.EditProfilePageForm(request.POST, instance=request.user.profile)
+        if user_form.is_valid() and profile_form.is_valid():
+            user_form.save()
+            profile_form.save()
+            messages.success(request, _('Your profile was successfully updated!'))
+            return redirect('settings:profile')
+        else:
+            messages.error(request, _('Please correct the error below.'))
+    else:
+        user_form = EditProfileForm(instance=request.user)
+        profile_form = forms.EditProfilePageForm(instance=request.user.profile)
+    return render(request, 'edit_profile_page.html', {
+        'user_form': user_form,
+        'profile_form': profile_form
+    })
 
 def index(request):
     post_list = Post.objects.filter(status=1).order_by('-created_on')
@@ -61,11 +85,6 @@ class ProfileView(generic.DetailView):
         context['page_user'] = page_user
         context['post_list'] = post_list
         return context
-
-class EditProfilePageView(generic.UpdateView):
-    model = Profile
-    template_name = 'edit_profile_page.html'
-    fields = ['bio', 'profile_pic',]
 
 class AboutView(generic.ListView):
     model = Post
