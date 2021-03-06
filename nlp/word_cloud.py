@@ -4,19 +4,18 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 from wordcloud import WordCloud
-import nltk
-from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 
 
-nltk.download('stopwords')
+with open('nlp/data/stopwords.txt', 'r') as file:
+    lines = file.readlines()
+    _stopwords = [line.strip('\n') for line in lines]
 
 def remove_stop_words(article):
-    stop_words = set(stopwords.words('english'))
-    word_tokens = word_tokenize(article)
+    word_tokens = word_tokenize(article.lower())
     filtered_tokens = []
     for w in word_tokens:
-        if w not in stop_words:
+        if w not in _stopwords:
             if w not in ',.!?':
                 filtered_tokens.append(w)
     return filtered_tokens
