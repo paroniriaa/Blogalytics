@@ -10,6 +10,8 @@ python:
 install:
         - pip install -r requirements.txt
         - python -m pip install Django
+        - python pip install django-ckeditor
+        - python pip install Pillow
 
 script:
         - echo 'Run basic test'
