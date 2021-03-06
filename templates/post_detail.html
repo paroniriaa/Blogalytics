@@ -1,6 +1,10 @@
 {% extends 'base.html' %} 
 {% load static %}
 {% block content %}
+<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'js/analytics.js' %}"></script>
+<script src="{% static 'js/elementmap.js' %}"></script>
+
 
   <!-- Page Header -->
   <header class="masthead" style="background-image: url('{% static 'img/starrynight.jpg' %}')">
@@ -18,7 +22,7 @@
   </header>
 
   <!-- Main Content -->
-  <div class="container">
+  <div class="container" style="background-image: none" id="test">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
         <h1>{% block title %} {{ post.title }} {% endblock title %}</h1>
@@ -47,6 +51,20 @@
           </button>
         </div>
         </form>
+<a class="btn btn-primary float-right" href="{% static 'img/starrynight.jpg' %}">See Word Cloud</a>
+        <button class="btn btn-primary float-middle" title="Not" onclick="showimage(this)">Generate Heat Map</button>
+        <script>
+          function showimage(element){
+            if(element.title == "display"){
+              element.title = "Not";
+              document.getElementById("test").style.backgroundImage="none";
+            }
+            else{
+              element.title = "display";
+              document.getElementById("test").style.backgroundImage="url(http://127.0.0.1:8000/analytics/heatmap/{{ post.title }}/)";
+            }
+          }
+        </script>
       </div>
     </div>
   </div>
