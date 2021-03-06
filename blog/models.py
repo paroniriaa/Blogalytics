@@ -25,7 +25,7 @@ class Post(models.Model):
         ordering = ['-created_on']
 
     def __str__(self):
-        return self
+        return self.title
 
     def save(self, *args, **kwargs):
         value = self.title
