@@ -56,6 +56,11 @@
                 <p class="post-subtitle">
                     It seems like you have not post anything yet, do you want to post your first work now?
                 </p>
+                {% if user.is_authenticated %}
+                <div class="clearfix">
+                    <a class="btn btn-primary float-right" href="{% url 'add_post'%}">New Post &rarr;</a>
+                    </div>
+                {% endif %}
               </div>
               <hr> 
             {% endif %}
