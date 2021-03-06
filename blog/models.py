@@ -10,12 +10,12 @@ import uuid
 
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
-    snippet = models.CharField(max_length=200)
+    #snippet = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete= models.CASCADE,related_name='blog_posts')
     updated_on = models.DateTimeField(auto_now= True)
     header_image =  models.ImageField(null=True, blank=True, upload_to='images/')
-    content = models.TextField(default="Content")
+    content = models.TextField(default="")
     # content = RichTextField(blank=True, null=True)
     created_on = models.DateTimeField(auto_now_add=True)
     post_id = models.UUIDField(default=uuid.uuid4, unique=True, editable=False)
