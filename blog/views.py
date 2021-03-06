@@ -5,12 +5,13 @@ from . import forms
 from django.urls import reverse_lazy, reverse
 from django.http import HttpResponseRedirect
 from django.db.models import Q
+from django.contrib.auth.models import User
 
 # Create your views here.
 def LikeView(request, slug):
     post = get_object_or_404(Post, id=request.POST.get('post_id'))
-    print("Post:", post)
     post.likes.add(request.user)
+
     return HttpResponseRedirect(reverse('post_detail', args=[str(slug)]))
 
 def index(request):
@@ -55,7 +56,8 @@ class ProfileView(generic.DetailView):
         users = Profile.objects.all()
         context = super(ProfileView, self).get_context_data(*args, **kwargs)
         page_user = get_object_or_404(Profile, id=self.kwargs['pk'])
-        post_list = Post.objects.filter(id=self.kwargs['pk'])
+        post_list = Post.objects.filter(author=get_object_or_404(User, id=self.kwargs['pk']))
+        print(self.kwargs['pk'], Post.objects.all())
         context['page_user'] = page_user
         context['post_list'] = post_list
         return context

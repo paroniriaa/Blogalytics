@@ -1,5 +1,4 @@
 {% extends 'base.html' %} 
-
 {% load static %}
 {% block content %}
 
@@ -23,7 +22,12 @@
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
         <h1>{% block title %} {{ post.title }} {% endblock title %}</h1>
-        <p class=" text-muted">{{ post.author }} | {{ post.created_on }}</p>
+        {% if post.author.profile.profile_pic %}
+          <p class=" text-muted"><img src="{{post.author.profile.profile_pic.url}}" width="25" height="25" style="vertical-align:middle" class='rounded-circle'> <a href="{% url 'show_profile' post.author.profile.id %}">{{ post.author }}</a> | {{ post.created_on }}</p>
+        {% else %}
+          <p class=" text-muted"><img src="{% static 'Blogalytics\images\default_profile_pic.png' %}" width="25" height="25" style="vertical-align:middle" class='rounded-circle'> <a href="{% url 'show_profile' post.author.id %}">{{ post.author }}</a> | {{ post.created_on }}</p>
+        {% endif %}
+        <!-- <p class=" text-muted">{{ post.author }} | {{ post.created_on }}</p> -->
         <p class="card-text ">{{ post.content | safe }}</p>
         <br>
         <br>
@@ -38,5 +42,11 @@
       </div>
     </div>
   </div>
+  <!-- <form action="{% url 'like_post' post.slug %}" method="POST">
+    {% csrf_token %}
+    <button type="submit", name="post_id", value="{{ post.id }}", class="btn btn-primary btn-sm">
+      Like {{ total_likes }}
+    </button>
+  </form> -->
 
 {% endblock %}

@@ -41,7 +41,7 @@ class Post(models.Model):
 class Profile(models.Model):
     user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
     bio = models.TextField(null=True, default="This user has not written anything here.")
-    profile_pic = models.ImageField(null=True, blank=True, upload_to='images/profile')
+    profile_pic = models.ImageField(null=True, blank=True, upload_to='images/profile', default=None)
     
     def create_user_profile(sender, instance, created, **kwargs):
         if created:
