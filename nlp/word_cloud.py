@@ -9,7 +9,6 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 
 
-
 nltk.download('stopwords')
 
 def remove_stop_words(article):
@@ -24,15 +23,15 @@ def remove_stop_words(article):
 
 def plot_word_cloud(artcile, target_path='figs/cloud.png'):
     tokens = remove_stop_words(artcile)
-    x, y = np.ogrid[:300, :300]
-    mask = (x - 150) ** 2 + (y - 150) ** 2 > 130 ** 2
-    mask = 255 * mask.astype(int)
-
-    wc = WordCloud(background_color="white", repeat=True, mask=mask)
-    wc.generate(' '.join(tokens))
+    tokens = ' '.join(tokens)
+    wordcloud = WordCloud(width=1600,
+                          height=800,
+                          background_color="white").generate(tokens)
+    plt.figure(figsize=(20, 10))
+    plt.imshow(wordcloud)
     plt.axis("off")
-    plt.imshow(wc, interpolation="bilinear")
-    # plt.show()
+    plt.tight_layout(pad=0)
     plt.savefig(target_path, bbox_inches='tight', dpi=500)
+    # plt.show()
 
 # plot_word_cloud('This article is a sample article.')
