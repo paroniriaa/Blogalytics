@@ -23,7 +23,7 @@
             <p>Want to change your profile? Fill out the form below then you are all set!</p>
             <form method="POST" enctype="multipart/form-data" id="profile_form" novalidate>
                 {% csrf_token %}
-                {{ form.as_p }}        
+                <!-- {{ form.as_p }}         -->
                 <div class="control-group">
                     <div class="form-group floating-label-form-group controls">
                     <label for="id_username">Username</label>
