@@ -55,3 +55,31 @@ class Profile(models.Model):
 
     def __str__(self):
         return str(self.user)
+
+class Page(models.Model):
+    id = models.AutoField(primary_key=True)
+    url = models.URLField()
+    width = models.IntegerField()
+    height = models.IntegerField()
+
+
+class HeatMap(models.Model):
+    '''This model stores the mouse coordinates'''
+    #id = models.AutoField(primary_key=True)
+    name = models.TextField(primary_key=True)
+    x_coord = models.TextField(blank=False, null=False)
+    y_coord = models.TextField(blank=False, null=False)
+    url = models.ForeignKey(Page, on_delete=models.CASCADE)
+    file = models.CharField(max_length=256)
+
+
+class Element(models.Model):
+    '''This model stores major html elements from a webpage
+    currently it will search for div and p tags, see views.py'''
+    id = models.AutoField(primary_key=True)
+    url = models.ForeignKey(Page, on_delete=models.CASCADE)
+    x = models.IntegerField()
+    y = models.IntegerField()
+    width = models.IntegerField()
+    height = models.IntegerField()
+    time_spent = models.IntegerField()
