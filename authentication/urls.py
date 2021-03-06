@@ -6,5 +6,5 @@ from .views import UserRegisterView, PasswordChangeView, UserLoginView
 urlpatterns = [
     path('register/', UserRegisterView.as_view(), name='register'),
     path('login/', UserLoginView.as_view(), name='login'),
-    path('password/', PasswordChangeView.as_view(template_name='registration/change-password.html')),
+    path('password/', PasswordChangeView.as_view(template_name='registration/change-password.html'), name='password'),
 ]
