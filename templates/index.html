@@ -31,7 +31,7 @@
                           {{ post.title }}
                       </h2>
                       <h3 class="post-subtitle">
-                          {{ post.snippet|slice:":200"}}
+                          {{ post.content | slice:":200"}}
                       </h3>
                       </a>
                       <p class="post-meta">Posted by {{ post.author }} | {{ post.created_on }}</p>
