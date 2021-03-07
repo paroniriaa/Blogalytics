@@ -41,7 +41,7 @@ class Post(models.Model):
 
 class Profile(models.Model):
     user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
-    bio = models.TextField(null=True, default="I have not write anything about myself yet")
+    bio = models.TextField(null=True, default="I have not written anything about myself yet")
     profile_pic = models.ImageField(null=True, blank=True, upload_to='images/profile', default=None)
     
     @receiver(post_save, sender=User)

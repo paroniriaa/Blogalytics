@@ -27,5 +27,5 @@ class EditProfilePageForm(forms.ModelForm):
         fields = ['bio', 'profile_pic',]
         widgets = {
             'bio': forms.Textarea(attrs={'rows': "5", 'class': "form-control", 'placeholder': "Bio", 'name': "bio",  'required': True, 'id': "id_bio"}),
-            'profile_pic': forms.FileInput(attrs={'type': "file", 'placeholder': "Profile Picture", 'name': "profile picture", 'id': "id_profile_pic"}),
+            'profile_pic': forms.FileInput(attrs={'type': "file", 'placeholder': "Profile Picture", 'name': "profile_pic", 'id': "id_profile_pic"})
         }

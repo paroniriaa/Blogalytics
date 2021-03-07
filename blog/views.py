@@ -9,6 +9,8 @@ from django.db.models import Q
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.db import transaction
+from django.contrib import messages
+from django.shortcuts import redirect
 
 # Create your views here.
 def LikeView(request, slug):
@@ -23,13 +25,16 @@ def edit_account(request, id):
     if request.method == 'POST':
         user_form = EditProfileForm(request.POST, instance=request.user)
         profile_form = forms.EditProfilePageForm(request.POST, instance=request.user.profile)
+        profile_pic = forms.EditProfilePageForm(request.POST, request.FILES)
+
         if user_form.is_valid() and profile_form.is_valid():
             user_form.save()
             profile_form.save()
-            messages.success(request, _('Your profile was successfully updated!'))
-            return redirect('settings:profile')
+            #profile_pic.save()
+            messages.success(request, 'Your profile was successfully updated!')
+            return HttpResponseRedirect(reverse('profile', args=[str(id)]))
         else:
-            messages.error(request, _('Please correct the error below.'))
+            messages.error(request, 'Please correct the error below.')
     else:
         user_form = EditProfileForm(instance=request.user)
         profile_form = forms.EditProfilePageForm(instance=request.user.profile)
@@ -37,6 +42,8 @@ def edit_account(request, id):
         'user_form': user_form,
         'profile_form': profile_form
     })
+
+
 
 def index(request):
     post_list = Post.objects.filter(status=1).order_by('-created_on')
