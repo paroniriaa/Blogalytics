@@ -14,6 +14,6 @@ install:
         
 script:
         - echo 'Make migrations'
-        - python manage.py make migrations
+        - python manage.py makemigrations
         - echo 'Migrate'
         - python manage.py migrate
