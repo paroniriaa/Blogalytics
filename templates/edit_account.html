@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('{% static 'img/starrynight.jpg' %}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>Account Editing</h1>
+            <span class="subheading">Want to Change? As you wish.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <p>Want to change your account? Change the section you like and update then you are all set!</p>
+            <form method="POST" enctype="multipart/form-data" id="profile_form" novalidate>
+                {% csrf_token %}
+                <!-- {{ form.as_p }}         -->
+                <div class="control-group">
+                  <label for="id_profile_pic">Profile Picture</label> 
+                  <br>
+                  <br>
+                  {% if user.profile.profile_pic %}
+                  <img src="{{user.profile.profile_pic.url}}" class='rounded-circle' width="200" height="200">                
+                  {% else %}
+                  <img src="{% static 'Blogalytics\images\default_profile_pic.png' %}" class='rounded-circle' width="200" height="200"> 
+                  {% endif %}
+                  <br>
+                  <br>
+                  {{ profile_form.profile_pic }}
+              </div>
+              <br>
+                <div class="control-group">
+                    <div class="form-group floating-label-form-group controls">
+                    <label for="id_username">Username</label>
+                    {{ user_form.username }}
+                    </div>
+                </div>
+                <br>
+                <div class="control-group">
+                    <div class="form-group floating-label-form-group controls">
+                    <label for="id_firstname">First Name</label> 
+                    {{ user_form.first_name }}
+                    </div>
+                </div>
+                <br>
+                <div class="control-group">
+                    <div class="form-group floating-label-form-group controls">
+                    <label for="id_last_name">Last Name</label> 
+                    {{ user_form.last_name }}
+                    </div>
+                </div>
+                <br>
+                <div class="control-group">
+                    <div class="form-group floating-label-form-group controls">
+                    <label for="id_emial">Email</label> 
+                    {{ user_form.email }}
+                    </div>
+                </div>
+                <br>
+                <div class="control-group">
+                    <div class="form-group floating-label-form-group controls">
+                    <label for="id_bio">Bio</label> 
+                    {{ profile_form.bio }}
+                    </div>
+                </div>
+                <br>
+                <div class="clearfix">
+                    <a class="btn btn-primary float-left" href="{% url 'home' %}">Cancel</a>
+                    <button class='btn btn-primary float-right'>Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+  </div>
+
+{% endblock %}

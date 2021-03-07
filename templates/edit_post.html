@@ -8,8 +8,8 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="page-heading">
-            <h1>New Posting</h1>
-            <span class="subheading">Want to Post? There you go.</span>
+            <h1>Post Revising</h1>
+            <span class="subheading">Want to revise? We got you.</span>
           </div>
         </div>
       </div>
@@ -20,7 +20,7 @@
     <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
-            <p>Want to post your work? Fill out the blog info below and post then you are all set!</p>
+            <p>Want to revise your work? Change the content on the section you like and update then you are all set!</p>
             <form method="POST" enctype="multipart/form-data" id="post_form" novalidate >
                 {% csrf_token %}
                 {{ form.media }}         
@@ -32,25 +32,14 @@
                 </div>
                 <div class="control-group">
                     <div class="form-group floating-label-form-group controls">
-                    <label for="id_slug">Slug</label> 
-                    {{ form.slug }}
-                    </div>
-                </div>
-                <div class="control-group">
-                    <div class="form-group floating-label-form-group controls">
                     <label for="id_content">Content</label> 
                     {{ form.content }}
                     </div>
                 </div>
                 <br>
-                <div class="control-group">
-                    <label for="id_author">Author</label>
-                    {{ form.author }}
-                </div>
-                <br>
                 <div class="clearfix">
                     <a class="btn btn-primary float-left" href="{% url 'home' %}">Cancel</a>
-                    <button class='btn btn-primary float-right'>Post</button>
+                    <button class='btn btn-primary float-right'>Update</button>
                 </div>
             </form>
         </div>

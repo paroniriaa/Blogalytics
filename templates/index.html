@@ -20,9 +20,11 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
+        {% if user.is_authenticated %}
         <div class="clearfix">
-            <a class="btn btn-primary float-right" href="http://127.0.0.1:8000/add_post/">New Post &rarr;</a>
+            <a class="btn btn-primary float-right" href="{% url 'add_post'%}">New Post &rarr;</a>
             </div>
+        {% endif %}
             {% if post_list %}
               {% for post in post_list %}
                   <div class="post-preview">
@@ -31,13 +33,46 @@
                           {{ post.title }}
                       </h2>
                       <h3 class="post-subtitle">
-                          {{ post.content|slice:":200" }}
+                          {{ post.content | slice:":200"}}
                       </h3>
                       </a>
-                      <p class="post-meta">Posted by {{ post.author }} | {{ post.created_on }}</p>
+                      <p class="post-meta">Posted by {{ post.author }}, {{ post.created_on }}</p>
                   </div>
+<form style="text-align: right;"> 
+                  <input type="button" class="btn btn-primary" value="show word cloud" id="{{ post.title }}" onclick="updateButton(this)">
+                </form>
+        <img src="{% static "" %}img/{{ post.title }}.png" id="{{ post.title }}.png" style='display:none' width="240px" hight="300px">
+                <p title="word cloud" id="{{ post.title }}" style="text-align: right;"></p>
                   <hr>
-              {% endfor %} 
+              {% endfor %}
+<script> 
+              const para = document.querySelectorAll("p[title='word cloud']");
+	function reP(iid){
+	id = iid + ".png" 
+	document.getElementById(id).style.display = "block";
+	}
+	function hiP(iid){
+	id = iid + ".png" 
+	document.getElementById(id).style.display = "none";
+	}
+
+              function updateButton(element){
+                if(element.value === "show word cloud"){
+                  element.value = "hide word cloud";
+                  for(let i = 0; i < para.length; i++){
+                    if(para[i].id == element.id)
+				reP(element.id);
+                  }
+                }else{
+                  element.value = "show word cloud";
+                  for(let i = 0; i < para.length; i++){
+                    if(para[i].id == element.id)
+                      hiP(element.id);
+                  }
+                }
+              }
+            </script>
+
             {% else %}
               <div class="post-preview">
                 <h2 class="post-title">
@@ -48,10 +83,7 @@
                 </p>
               </div>
               <hr> 
-            {% endif %} 
-        <!-- Pager -->
-        <div class="clearfix">
-        <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+            {% endif %}
         </div>
       </div>
     </div>
