@@ -10,8 +10,9 @@ python:
 install:
         - pip install pip==19.0.3
         - pip --version
-        - pip install en-core-web-sm==2.3.0
-        - pip install -r requirements.txt
+        - pip3 --version
+        - pip3 install en-core-web-sm==2.3.0
+        - pip3 install -r requirements.txt
         
 script:
         - echo 'Make migrations'
