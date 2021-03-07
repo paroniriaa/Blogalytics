@@ -8,6 +8,7 @@ python:
         - '3.8'
         
 install:
+        - pip install pip==19.0.3
         - pip install en-core-web-sm==2.3.0
         - pip install -r requirements.txt
         
