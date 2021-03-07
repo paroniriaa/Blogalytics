@@ -17,12 +17,15 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path, include
 from blog import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
-    path('admin/', admin.site.urls, name='admin'),
+    url(r'^admin/', admin.site.urls, name='admin'),
     path('', include('blog.urls'), name='home'),
+    path('auth/', include('django.contrib.auth.urls')),
+    path('auth/', include('authentication.urls')),
     path('search/', views.SearchResultsView.as_view(), name='search_results'),
     path('about/', views.AboutView.as_view(), name='about'),
     path('<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),
-    #url(r'^<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
