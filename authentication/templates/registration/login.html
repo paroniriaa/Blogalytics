@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+  <!-- Page Header -->
+<header class="masthead" style="background-image: url('{% static 'img/starrynight.jpg' %}')">
+<div class="overlay"></div>
+<div class="container">
+    <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="page-heading">
+        <h1>Log In</h1>
+        <span class="subheading">Good to see you back! We can't wait to hear new stories from you.</span>
+        </div>
+    </div>
+    </div>
+</div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+        <form method="POST" enctype="multipart/form-data" id="login_form" novalidate>
+            {% csrf_token %}        
+            <div class="control-group">
+                <div class="form-group floating-label-form-group controls">
+                <label for="id_username">Username</label>
+                <input type="text" class="form-control" placeholder="Username" name="username" maxlength="100" required id="id_username">
+            </div>
+            <div class="control-group">
+                <div class="form-group floating-label-form-group controls">
+                <label for="id_password">Password</label> 
+                <input type="password" class="form-control" placeholder="Password" name="password" maxlength="100" required id="id_password">
+                </div>
+            </div>
+            <br>
+            <div class="clearfix">
+                <a class="btn btn-primary float-left" href="{% url 'home' %}">Cancel</a>
+                <button class='btn btn-primary float-right'>Login</button>
+            </div>
+        </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
