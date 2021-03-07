@@ -1,5 +1,6 @@
 First, clone the repository  
   `git clone https://github.com/cs130-w21/15.git`  
+  
 Second, setup the virtual environment
  ```
  $ pip install virtualenv // if you haven't installed virtualenv before
