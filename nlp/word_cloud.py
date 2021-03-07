@@ -11,6 +11,14 @@ nlp = spacy.load("en_core_web_sm")
 
 
 def remove_stop_words(article):
+    """Remove stop words from an article, as they should not be shown on the
+       word cloud
+
+    :param article: a string representing the article
+
+    :returns: the filtered tokens for the input article
+    :rtype: a list of string
+    """
     doc = nlp(article.lower())
     filtered_tokens = []
     for word in doc:
@@ -21,6 +29,13 @@ def remove_stop_words(article):
     return filtered_tokens
 
 def plot_word_cloud(artcile, target_path='figs/cloud.png'):
+    """Plot word cloud and save it to a local file
+
+    :param: artcile: a string representing the article
+    :param: target_path: the path to save word cloud figure
+
+    :return: None
+    """
     tokens = remove_stop_words(artcile)
     article = ' '.join(tokens)
     wordcloud = WordCloud(width=1600,
