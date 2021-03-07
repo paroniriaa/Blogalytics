@@ -1,0 +1,53 @@
+blog.migrations package
+=======================
+
+Submodules
+----------
+
+blog.migrations.0001\_initial module
+------------------------------------
+
+.. automodule:: blog.migrations.0001_initial
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+blog.migrations.0002\_post\_slug module
+---------------------------------------
+
+.. automodule:: blog.migrations.0002_post_slug
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+blog.migrations.0003\_auto\_20210115\_1206 module
+-------------------------------------------------
+
+.. automodule:: blog.migrations.0003_auto_20210115_1206
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+blog.migrations.0004\_post\_post\_id module
+-------------------------------------------
+
+.. automodule:: blog.migrations.0004_post_post_id
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+blog.migrations.0005\_auto\_20210307\_0741 module
+-------------------------------------------------
+
+.. automodule:: blog.migrations.0005_auto_20210307_0741
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: blog.migrations
+   :members:
+   :undoc-members:
+   :show-inheritance:

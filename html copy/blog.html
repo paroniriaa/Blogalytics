@@ -1,0 +1,594 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>blog package &#8212; Blogalytics  documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="blog-package">
+<h1>blog package<a class="headerlink" href="#blog-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="blog.migrations.html">blog.migrations package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="blog.migrations.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blog.migrations.html#module-blog.migrations.0001_initial">blog.migrations.0001_initial module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blog.migrations.html#module-blog.migrations.0002_post_slug">blog.migrations.0002_post_slug module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blog.migrations.html#module-blog.migrations.0003_auto_20210115_1206">blog.migrations.0003_auto_20210115_1206 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blog.migrations.html#module-blog.migrations.0004_post_post_id">blog.migrations.0004_post_post_id module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blog.migrations.html#module-blog.migrations.0005_auto_20210307_0741">blog.migrations.0005_auto_20210307_0741 module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blog.migrations.html#module-blog.migrations">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-blog.admin">
+<span id="blog-admin-module"></span><h2>blog.admin module<a class="headerlink" href="#module-blog.admin" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="blog.admin.PostAdmin">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.admin.</span></code><code class="sig-name descname"><span class="pre">PostAdmin</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin_site</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.admin.PostAdmin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.contrib.admin.options.ModelAdmin</span></code></p>
+<dl class="py attribute">
+<dt id="blog.admin.PostAdmin.list_display">
+<code class="sig-name descname"><span class="pre">list_display</span></code><em class="property"> <span class="pre">=</span> <span class="pre">('title',</span> <span class="pre">'slug',</span> <span class="pre">'status',</span> <span class="pre">'created_on')</span></em><a class="headerlink" href="#blog.admin.PostAdmin.list_display" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.admin.PostAdmin.list_filter">
+<code class="sig-name descname"><span class="pre">list_filter</span></code><em class="property"> <span class="pre">=</span> <span class="pre">('status',)</span></em><a class="headerlink" href="#blog.admin.PostAdmin.list_filter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="blog.admin.PostAdmin.media">
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">media</span></code><a class="headerlink" href="#blog.admin.PostAdmin.media" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.admin.PostAdmin.prepopulated_fields">
+<code class="sig-name descname"><span class="pre">prepopulated_fields</span></code><em class="property"> <span class="pre">=</span> <span class="pre">{'slug':</span> <span class="pre">('title',)}</span></em><a class="headerlink" href="#blog.admin.PostAdmin.prepopulated_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.admin.PostAdmin.search_fields">
+<code class="sig-name descname"><span class="pre">search_fields</span></code><em class="property"> <span class="pre">=</span> <span class="pre">['title',</span> <span class="pre">'content']</span></em><a class="headerlink" href="#blog.admin.PostAdmin.search_fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-blog.apps">
+<span id="blog-apps-module"></span><h2>blog.apps module<a class="headerlink" href="#module-blog.apps" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="blog.apps.BlogConfig">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.apps.</span></code><code class="sig-name descname"><span class="pre">BlogConfig</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_module</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.apps.BlogConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.apps.config.AppConfig</span></code></p>
+<dl class="py attribute">
+<dt id="blog.apps.BlogConfig.name">
+<code class="sig-name descname"><span class="pre">name</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'blog'</span></em><a class="headerlink" href="#blog.apps.BlogConfig.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-blog.models">
+<span id="blog-models-module"></span><h2>blog.models module<a class="headerlink" href="#module-blog.models" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="blog.models.Post">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.models.</span></code><code class="sig-name descname"><span class="pre">Post</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">slug</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">author</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">updated_on</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">created_on</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">post_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.models.Post" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.models.base.Model</span></code></p>
+<dl class="py exception">
+<dt id="blog.models.Post.DoesNotExist">
+<em class="property"><span class="pre">exception</span> </em><code class="sig-name descname"><span class="pre">DoesNotExist</span></code><a class="headerlink" href="#blog.models.Post.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt id="blog.models.Post.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span> </em><code class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></code><a class="headerlink" href="#blog.models.Post.MultipleObjectsReturned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.core.exceptions.MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.models.Post.author">
+<code class="sig-name descname"><span class="pre">author</span></code><a class="headerlink" href="#blog.models.Post.author" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Child.parent</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.models.Post.author_id">
+<code class="sig-name descname"><span class="pre">author_id</span></code><a class="headerlink" href="#blog.models.Post.author_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.models.Post.content">
+<code class="sig-name descname"><span class="pre">content</span></code><a class="headerlink" href="#blog.models.Post.content" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.models.Post.created_on">
+<code class="sig-name descname"><span class="pre">created_on</span></code><a class="headerlink" href="#blog.models.Post.created_on" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blog.models.Post.get_absolute_url">
+<code class="sig-name descname"><span class="pre">get_absolute_url</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blog.models.Post.get_absolute_url" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="blog.models.Post.get_next_by_created_on">
+<code class="sig-name descname"><span class="pre">get_next_by_created_on</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">*</span></em>, <em class="sig-param"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">created_on&gt;</span></em>, <em class="sig-param"><span class="pre">is_next=True</span></em>, <em class="sig-param"><span class="pre">**kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.models.Post.get_next_by_created_on" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="blog.models.Post.get_next_by_updated_on">
+<code class="sig-name descname"><span class="pre">get_next_by_updated_on</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">*</span></em>, <em class="sig-param"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">updated_on&gt;</span></em>, <em class="sig-param"><span class="pre">is_next=True</span></em>, <em class="sig-param"><span class="pre">**kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.models.Post.get_next_by_updated_on" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="blog.models.Post.get_previous_by_created_on">
+<code class="sig-name descname"><span class="pre">get_previous_by_created_on</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">*</span></em>, <em class="sig-param"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">created_on&gt;</span></em>, <em class="sig-param"><span class="pre">is_next=False</span></em>, <em class="sig-param"><span class="pre">**kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.models.Post.get_previous_by_created_on" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="blog.models.Post.get_previous_by_updated_on">
+<code class="sig-name descname"><span class="pre">get_previous_by_updated_on</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">*</span></em>, <em class="sig-param"><span class="pre">field=&lt;django.db.models.fields.DateTimeField:</span> <span class="pre">updated_on&gt;</span></em>, <em class="sig-param"><span class="pre">is_next=False</span></em>, <em class="sig-param"><span class="pre">**kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.models.Post.get_previous_by_updated_on" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="blog.models.Post.get_status_display">
+<code class="sig-name descname"><span class="pre">get_status_display</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">*</span></em>, <em class="sig-param"><span class="pre">field=&lt;django.db.models.fields.IntegerField:</span> <span class="pre">status&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.models.Post.get_status_display" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.models.Post.id">
+<code class="sig-name descname"><span class="pre">id</span></code><a class="headerlink" href="#blog.models.Post.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.models.Post.objects">
+<code class="sig-name descname"><span class="pre">objects</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#blog.models.Post.objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.models.Post.post_id">
+<code class="sig-name descname"><span class="pre">post_id</span></code><a class="headerlink" href="#blog.models.Post.post_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blog.models.Post.save">
+<code class="sig-name descname"><span class="pre">save</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.models.Post.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the current instance. Override this in a subclass if you want to
+control the saving process.</p>
+<p>The ‘force_insert’ and ‘force_update’ parameters can be used to insist
+that the “save” must be an SQL insert or update (or equivalent for
+non-SQL backends), respectively. Normally, they should not be set.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.models.Post.slug">
+<code class="sig-name descname"><span class="pre">slug</span></code><a class="headerlink" href="#blog.models.Post.slug" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.models.Post.status">
+<code class="sig-name descname"><span class="pre">status</span></code><a class="headerlink" href="#blog.models.Post.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.models.Post.title">
+<code class="sig-name descname"><span class="pre">title</span></code><a class="headerlink" href="#blog.models.Post.title" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.models.Post.updated_on">
+<code class="sig-name descname"><span class="pre">updated_on</span></code><a class="headerlink" href="#blog.models.Post.updated_on" title="Permalink to this definition">¶</a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-blog.tests">
+<span id="blog-tests-module"></span><h2>blog.tests module<a class="headerlink" href="#module-blog.tests" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="blog.tests.PostAboutViewTests">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.tests.</span></code><code class="sig-name descname"><span class="pre">PostAboutViewTests</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.tests.PostAboutViewTests" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<dl class="py method">
+<dt id="blog.tests.PostAboutViewTests.test_accessability">
+<code class="sig-name descname"><span class="pre">test_accessability</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blog.tests.PostAboutViewTests.test_accessability" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="blog.tests.PostAboutViewTests.test_html_template_correstness">
+<code class="sig-name descname"><span class="pre">test_html_template_correstness</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blog.tests.PostAboutViewTests.test_html_template_correstness" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="blog.tests.PostAboutViewTests.test_page_elements">
+<code class="sig-name descname"><span class="pre">test_page_elements</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blog.tests.PostAboutViewTests.test_page_elements" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="blog.tests.PostAddPostViewTests">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.tests.</span></code><code class="sig-name descname"><span class="pre">PostAddPostViewTests</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.tests.PostAddPostViewTests" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<dl class="py method">
+<dt id="blog.tests.PostAddPostViewTests.test_add_post_functionaility">
+<code class="sig-name descname"><span class="pre">test_add_post_functionaility</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blog.tests.PostAddPostViewTests.test_add_post_functionaility" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="blog.tests.PostModelTests">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.tests.</span></code><code class="sig-name descname"><span class="pre">PostModelTests</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.tests.PostModelTests" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<dl class="py method">
+<dt id="blog.tests.PostModelTests.setUpTestData">
+<em class="property"><span class="pre">classmethod</span> </em><code class="sig-name descname"><span class="pre">setUpTestData</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blog.tests.PostModelTests.setUpTestData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load initial data for the TestCase.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blog.tests.PostModelTests.test_author">
+<code class="sig-name descname"><span class="pre">test_author</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blog.tests.PostModelTests.test_author" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="blog.tests.PostModelTests.test_content">
+<code class="sig-name descname"><span class="pre">test_content</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blog.tests.PostModelTests.test_content" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="blog.tests.PostModelTests.test_get_absolute_url">
+<code class="sig-name descname"><span class="pre">test_get_absolute_url</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blog.tests.PostModelTests.test_get_absolute_url" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="blog.tests.PostModelTests.test_slug_max_length">
+<code class="sig-name descname"><span class="pre">test_slug_max_length</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blog.tests.PostModelTests.test_slug_max_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="blog.tests.PostModelTests.test_status">
+<code class="sig-name descname"><span class="pre">test_status</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blog.tests.PostModelTests.test_status" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="blog.tests.PostModelTests.test_title">
+<code class="sig-name descname"><span class="pre">test_title</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blog.tests.PostModelTests.test_title" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="blog.tests.PostModelTests.test_title_max_length">
+<code class="sig-name descname"><span class="pre">test_title_max_length</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blog.tests.PostModelTests.test_title_max_length" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="blog.tests.PostPostDetailTests">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.tests.</span></code><code class="sig-name descname"><span class="pre">PostPostDetailTests</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.tests.PostPostDetailTests" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<dl class="py method">
+<dt id="blog.tests.PostPostDetailTests.setUpTestData">
+<em class="property"><span class="pre">classmethod</span> </em><code class="sig-name descname"><span class="pre">setUpTestData</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blog.tests.PostPostDetailTests.setUpTestData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load initial data for the TestCase.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="blog.tests.PostPostDetailTests.test_accessability">
+<code class="sig-name descname"><span class="pre">test_accessability</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blog.tests.PostPostDetailTests.test_accessability" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="blog.tests.PostPostDetailTests.test_html_template_correstness">
+<code class="sig-name descname"><span class="pre">test_html_template_correstness</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blog.tests.PostPostDetailTests.test_html_template_correstness" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="blog.tests.PostPostDetailTests.test_page_elements">
+<code class="sig-name descname"><span class="pre">test_page_elements</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blog.tests.PostPostDetailTests.test_page_elements" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="blog.tests.PostPostListTests">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.tests.</span></code><code class="sig-name descname"><span class="pre">PostPostListTests</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.tests.PostPostListTests" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<dl class="py method">
+<dt id="blog.tests.PostPostListTests.test_accessability">
+<code class="sig-name descname"><span class="pre">test_accessability</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blog.tests.PostPostListTests.test_accessability" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="blog.tests.PostPostListTests.test_few_post">
+<code class="sig-name descname"><span class="pre">test_few_post</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blog.tests.PostPostListTests.test_few_post" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="blog.tests.PostPostListTests.test_html_template_correstness">
+<code class="sig-name descname"><span class="pre">test_html_template_correstness</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blog.tests.PostPostListTests.test_html_template_correstness" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="blog.tests.PostPostListTests.test_no_post">
+<code class="sig-name descname"><span class="pre">test_no_post</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blog.tests.PostPostListTests.test_no_post" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="blog.tests.PostPostListTests.test_one_post">
+<code class="sig-name descname"><span class="pre">test_one_post</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blog.tests.PostPostListTests.test_one_post" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="blog.tests.PostPostListTests.test_redirect_accessability_about">
+<code class="sig-name descname"><span class="pre">test_redirect_accessability_about</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blog.tests.PostPostListTests.test_redirect_accessability_about" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="blog.tests.PostPostListTests.test_redirect_accessability_add_post">
+<code class="sig-name descname"><span class="pre">test_redirect_accessability_add_post</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blog.tests.PostPostListTests.test_redirect_accessability_add_post" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="blog.tests.create_post">
+<code class="sig-prename descclassname"><span class="pre">blog.tests.</span></code><code class="sig-name descname"><span class="pre">create_post</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.tests.create_post" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="blog.tests.create_user">
+<code class="sig-prename descclassname"><span class="pre">blog.tests.</span></code><code class="sig-name descname"><span class="pre">create_user</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blog.tests.create_user" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-blog.urls">
+<span id="blog-urls-module"></span><h2>blog.urls module<a class="headerlink" href="#module-blog.urls" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-blog.views">
+<span id="blog-views-module"></span><h2>blog.views module<a class="headerlink" href="#module-blog.views" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="blog.views.AboutView">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.views.</span></code><code class="sig-name descname"><span class="pre">AboutView</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.views.AboutView" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.list.ListView</span></code></p>
+<dl class="py attribute">
+<dt id="blog.views.AboutView.model">
+<code class="sig-name descname"><span class="pre">model</span></code><a class="headerlink" href="#blog.views.AboutView.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#blog.models.Post" title="blog.models.Post"><code class="xref py py-class docutils literal notranslate"><span class="pre">blog.models.Post</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.views.AboutView.template_name">
+<code class="sig-name descname"><span class="pre">template_name</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'about.html'</span></em><a class="headerlink" href="#blog.views.AboutView.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="blog.views.AddPostView">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.views.</span></code><code class="sig-name descname"><span class="pre">AddPostView</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.views.AddPostView" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.edit.CreateView</span></code></p>
+<dl class="py attribute">
+<dt id="blog.views.AddPostView.exclude">
+<code class="sig-name descname"><span class="pre">exclude</span></code><em class="property"> <span class="pre">=</span> <span class="pre">['post_id']</span></em><a class="headerlink" href="#blog.views.AddPostView.exclude" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.views.AddPostView.fields">
+<code class="sig-name descname"><span class="pre">fields</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'__all__'</span></em><a class="headerlink" href="#blog.views.AddPostView.fields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.views.AddPostView.model">
+<code class="sig-name descname"><span class="pre">model</span></code><a class="headerlink" href="#blog.views.AddPostView.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#blog.models.Post" title="blog.models.Post"><code class="xref py py-class docutils literal notranslate"><span class="pre">blog.models.Post</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.views.AddPostView.template_name">
+<code class="sig-name descname"><span class="pre">template_name</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'add_post.html'</span></em><a class="headerlink" href="#blog.views.AddPostView.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="blog.views.PostDetail">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.views.</span></code><code class="sig-name descname"><span class="pre">PostDetail</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.views.PostDetail" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.detail.DetailView</span></code></p>
+<dl class="py attribute">
+<dt id="blog.views.PostDetail.model">
+<code class="sig-name descname"><span class="pre">model</span></code><a class="headerlink" href="#blog.views.PostDetail.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#blog.models.Post" title="blog.models.Post"><code class="xref py py-class docutils literal notranslate"><span class="pre">blog.models.Post</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.views.PostDetail.template_name">
+<code class="sig-name descname"><span class="pre">template_name</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'post_detail.html'</span></em><a class="headerlink" href="#blog.views.PostDetail.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="blog.views.PostList">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.views.</span></code><code class="sig-name descname"><span class="pre">PostList</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.views.PostList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.list.ListView</span></code></p>
+<dl class="py attribute">
+<dt id="blog.views.PostList.context">
+<code class="sig-name descname"><span class="pre">context</span></code><em class="property"> <span class="pre">=</span> <span class="pre">{'post_list':</span> <span class="pre">&lt;QuerySet</span> <span class="pre">[]&gt;}</span></em><a class="headerlink" href="#blog.views.PostList.context" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.views.PostList.queryset">
+<code class="sig-name descname"><span class="pre">queryset</span></code><em class="property"> <span class="pre">=</span> <span class="pre">&lt;QuerySet</span> <span class="pre">[]&gt;</span></em><a class="headerlink" href="#blog.views.PostList.queryset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.views.PostList.template_name">
+<code class="sig-name descname"><span class="pre">template_name</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'index.html'</span></em><a class="headerlink" href="#blog.views.PostList.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="blog.views.SearchResultsView">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.views.</span></code><code class="sig-name descname"><span class="pre">SearchResultsView</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.views.SearchResultsView" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.views.generic.list.ListView</span></code></p>
+<dl class="py method">
+<dt id="blog.views.SearchResultsView.get_queryset">
+<code class="sig-name descname"><span class="pre">get_queryset</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#blog.views.SearchResultsView.get_queryset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the list of items for this view.</p>
+<p>The return value must be an iterable and may be an instance of
+<cite>QuerySet</cite> in which case <cite>QuerySet</cite> specific behavior will be enabled.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.views.SearchResultsView.model">
+<code class="sig-name descname"><span class="pre">model</span></code><a class="headerlink" href="#blog.views.SearchResultsView.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#blog.models.Post" title="blog.models.Post"><code class="xref py py-class docutils literal notranslate"><span class="pre">blog.models.Post</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.views.SearchResultsView.template_name">
+<code class="sig-name descname"><span class="pre">template_name</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'search_results.html'</span></em><a class="headerlink" href="#blog.views.SearchResultsView.template_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="blog.views.index">
+<code class="sig-prename descclassname"><span class="pre">blog.views.</span></code><code class="sig-name descname"><span class="pre">index</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.views.index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-blog">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-blog" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Blogalytics</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Example.html">“Sphinx Example” for your documentation88</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nlp.html">nlp package</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Team15.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/blog.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

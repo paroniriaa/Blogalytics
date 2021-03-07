@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>my_example module &#8212; Blogalytics  documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-my_example">
+<span id="my-example-module"></span><h1>my_example module<a class="headerlink" href="#module-my_example" title="Permalink to this headline">¶</a></h1>
+<p class="centered">
+<strong>Learing Sphinx</strong></p><dl class="py class">
+<dt id="my_example.House">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">my_example.</span></code><code class="sig-name descname"><span class="pre">House</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phone_number</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_example.House" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>House 這個class 有什麼
+&gt;&gt;&gt;  __init__(self, address, name, phone_number)</p>
+<blockquote>
+<div><p>初始化一個House</p>
+</div></blockquote>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span> <span class="n">move_in</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amount</span><span class="p">)</span>
+<span class="go">    遷入</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span> <span class="n">move_out</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amount</span><span class="p">)</span>
+<span class="go">遷出</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span> <span class="fm">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+<span class="go">    毀掉</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>這邊我們建立一個little turle 的家做示範</p>
+</div></blockquote>
+<dl class="simple">
+<dt>## 建立一個House(little_turtle_home) 並給予基本資料</dt><dd><p>little_turtle_home = House(‘any Town any Street’, ‘Turtle’, ‘09xx’)
+little_turtle_home.move_in(2)
+little_turtle_home.move_in(4)
+little_turtle_home.move_in(2)
+little_turtle_home.move_out(2)
+## print 出成員人數
+print(little_turtle_home.member)
+## 毀掉房子
+del little_turtle_home
+# print(little_turtle_home)
+##NameError: name ‘little_turtle_home’ is not defined</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="my_example.House.move_in">
+<code class="sig-name descname"><span class="pre">move_in</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_example.House.move_in" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="my_example.House.move_out">
+<code class="sig-name descname"><span class="pre">move_out</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#my_example.House.move_out" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="my_example.print_hello">
+<code class="sig-prename descclassname"><span class="pre">my_example.</span></code><code class="sig-name descname"><span class="pre">print_hello</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#my_example.print_hello" title="Permalink to this definition">¶</a></dt>
+<dd><p>哈囉
+&gt;&gt;&gt; print(‘hello’)</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Blogalytics</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Example.html">“Sphinx Example” for your documentation88</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nlp.html">nlp package</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Team15.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/my_example.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

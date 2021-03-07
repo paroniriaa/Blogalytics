@@ -1,0 +1,9 @@
+"Sphinx Example" for project documentation hahaha
+=============================================
+
+Here is  out fdjsalfjasdklfja
+
+
+.. automodule:: my_example
+  :members:
+  :noindex:
