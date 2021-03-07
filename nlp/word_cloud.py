@@ -2,30 +2,30 @@ import os
 
 import numpy as np
 import matplotlib.pyplot as plt
-
+import spacy
 from wordcloud import WordCloud
-from nltk.tokenize import word_tokenize
 
+# Run the folling command to instll english model for the first time
+# python -m spacy download en_core_web_sm
+nlp = spacy.load("en_core_web_sm")
 
-with open('nlp/data/stopwords.txt', 'r') as file:
-    lines = file.readlines()
-    _stopwords = [line.strip('\n') for line in lines]
 
 def remove_stop_words(article):
-    word_tokens = word_tokenize(article.lower())
+    doc = nlp(article.lower())
     filtered_tokens = []
-    for w in word_tokens:
-        if w not in _stopwords:
-            if w not in ',.!?':
-                filtered_tokens.append(w)
+    for word in doc:
+        if word.text not in nlp.Defaults.stop_words:
+            if word.text not in ',.!?':
+                filtered_tokens.append(word.text)
+
     return filtered_tokens
 
 def plot_word_cloud(artcile, target_path='figs/cloud.png'):
     tokens = remove_stop_words(artcile)
-    tokens = ' '.join(tokens)
+    article = ' '.join(tokens)
     wordcloud = WordCloud(width=1600,
                           height=800,
-                          background_color="white").generate(tokens)
+                          background_color="white").generate(article)
     plt.figure(figsize=(20, 10))
     plt.imshow(wordcloud)
     plt.axis("off")
