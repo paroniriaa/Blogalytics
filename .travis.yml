@@ -2,15 +2,16 @@ language: python
 
 branches:
   only:
-    - basic-platform
+    - master
 
 python:
         - '3.8'
         
 install:
         - pip install -r requirements.txt
-        - python -m pip install Django
-
+        
 script:
-        - echo 'Run basic test'
-        - python manage.py test -v 2
+        - echo 'Make migrations'
+        - python manage.py make migrations
+        - echo 'Migrate'
+        - python manage.py migrate
