@@ -8,13 +8,9 @@ python:
         - '3.7.4'
         
 install:
-        - pip install pip==19.0.3
-        - pip --version
-        - pip3 --version
-        - pip3 install spacy==2.3.5    
-        - pip3 install spacy-legacy==3.0.1 
-        - pip3 install en-core-web-sm==2.3.0
-        - pip3 install -r requirements.txt
+        - pip install spacy==2.3.5    
+        - pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.0/en_core_web_sm-2.3.0.tar.gz
+        - pip install -r requirements.txt
         
 script:
         - echo 'Make migrations'
