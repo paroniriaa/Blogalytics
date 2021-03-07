@@ -9,8 +9,16 @@ import numpy as np
 from sklearn.feature_extraction.text import CountVectorizer
 
 
-def build_idf_vocab(corpus, vocabulary=None):
-    vectorizer = CountVectorizer(vocabulary=vocabulary)
+def build_idf_vocab(corpus):
+    """Build the inverse document frequency(idf) dictionary
+
+    :param corpus: a list of string represent the articles to generate idf dict
+
+    :returns: a dict that maps a word to its idf value
+    :rtype: dict(string, float)
+    """
+
+    vectorizer = CountVectorizer(vocabulary=None)
     matrix = vectorizer.fit_transform(corpus)
     count = (matrix.toarray() > 0).sum(axis=0)
     words = vectorizer.get_feature_names()
@@ -20,6 +28,13 @@ def build_idf_vocab(corpus, vocabulary=None):
     return idf_vocab
 
 def get_tf_vocab(article):
+    """Build the term frequency(tf) dictionary for a given article
+
+    :param article: a string, representing the article
+
+    :returns: a dict that maps a word to its tf value
+    :rtype: dict(string, float)
+    """
     assert type(article) == str, "article must be in string format"
     vectorizer = CountVectorizer()
     count = vectorizer.fit_transform([article]).toarray()[0]
@@ -30,6 +45,16 @@ def get_tf_vocab(article):
     return tf_vocab
 
 def get_tfidf_score(tf_vocab, idf_vocab):
+    """Calculate the tfidf score for an article
+
+    :param tf_vocab: a dict that maps a word into its tf value
+    :param idf_vocab: a dict that maps a word into its idf value
+
+    :returns: a list of tuple, where the first element is the word,
+              the second element is its tf-idf score.
+    :rtype: a list of (str, float)
+    """
+
     scores = []
     for word in tf_vocab:
         tfidf = tf_vocab[word] * idf_vocab.get(word, 0)
@@ -43,6 +68,16 @@ class FreqWordExtract():
         self.idf_vocab = idf_vocab
 
     def extract_keyword(self, article, top_n=5, threshold=0.3):
+        """Extract keywords from an article based on tf-idf algorithm
+
+        :param: article: a string representing the article
+        :param: top_n: output top_n keywords sorted by their tf-idf value
+        :param: threshold: only keywords whose scores are above threshold
+                chosen as output
+
+        :returns: a list of string, each element is a generated keyword
+        :rtype: a list of string
+        """
         tf_vocab = get_tf_vocab(article)
         scores = get_tfidf_score(tf_vocab, self.idf_vocab)
         keywords = [word for word, score in scores if score > threshold]
@@ -56,6 +91,14 @@ def read_lines(filename):
     return lines
 
 def extract_from_json(json_str, verbose=False):
+    """A helper function to extract data from KPTimes dataset in json format
+
+    :param: json_str: the json string
+    :param: verbose: bool, if logging the process of data processing
+
+    :returns: the articles and keywords for each article
+    :rtype: src (list of string), tgt (list of keyword list)
+    """
     src = []
     tgt = []
     for idx in range(len(json_str)):
