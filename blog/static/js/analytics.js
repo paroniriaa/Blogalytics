@@ -31,6 +31,7 @@ function add_postform(data, coordinates, delta_time, server) {
        var frm = document.createElement('form');
        ifr.setAttribute("id", 'ifr_analytics');
        frm.setAttribute("action", server);
+	  ifr.setAttribute("style", 'display:none');
        frm.setAttribute("method", "POST");
        frm.setAttribute("id","analytics");
        var elem = document.createElement('input');
