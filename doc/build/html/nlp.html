@@ -1,0 +1,297 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nlp package &#8212; Blogalytics 1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="nlp.migrations package" href="nlp.migrations.html" />
+    <link rel="prev" title="Welcome to Blogalytics’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="nlp-package">
+<h1>nlp package<a class="headerlink" href="#nlp-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="nlp.migrations.html">nlp.migrations package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nlp.migrations.html#module-nlp.migrations">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-nlp.admin">
+<span id="nlp-admin-module"></span><h2>nlp.admin module<a class="headerlink" href="#module-nlp.admin" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-nlp.apps">
+<span id="nlp-apps-module"></span><h2>nlp.apps module<a class="headerlink" href="#module-nlp.apps" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="nlp.apps.NlpConfig">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">nlp.apps.</span></code><code class="sig-name descname"><span class="pre">NlpConfig</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_module</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nlp.apps.NlpConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.apps.config.AppConfig</span></code></p>
+<dl class="py attribute">
+<dt id="nlp.apps.NlpConfig.name">
+<code class="sig-name descname"><span class="pre">name</span></code><em class="property"> <span class="pre">=</span> <span class="pre">'nlp'</span></em><a class="headerlink" href="#nlp.apps.NlpConfig.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-nlp.models">
+<span id="nlp-models-module"></span><h2>nlp.models module<a class="headerlink" href="#module-nlp.models" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-nlp.tests">
+<span id="nlp-tests-module"></span><h2>nlp.tests module<a class="headerlink" href="#module-nlp.tests" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="nlp.tests.BuildIdvVocabTests">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">nlp.tests.</span></code><code class="sig-name descname"><span class="pre">BuildIdvVocabTests</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nlp.tests.BuildIdvVocabTests" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<dl class="py method">
+<dt id="nlp.tests.BuildIdvVocabTests.test_build_idf_vocab">
+<code class="sig-name descname"><span class="pre">test_build_idf_vocab</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nlp.tests.BuildIdvVocabTests.test_build_idf_vocab" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nlp.tests.BuildIdvVocabTests.test_get_tf_vocab">
+<code class="sig-name descname"><span class="pre">test_get_tf_vocab</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nlp.tests.BuildIdvVocabTests.test_get_tf_vocab" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nlp.tests.BuildIdvVocabTests.test_set_idf_vocab_from_corpus">
+<code class="sig-name descname"><span class="pre">test_set_idf_vocab_from_corpus</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nlp.tests.BuildIdvVocabTests.test_set_idf_vocab_from_corpus" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="nlp.tests.BuildIdvVocabTests.test_set_idf_vocab_from_pkl">
+<code class="sig-name descname"><span class="pre">test_set_idf_vocab_from_pkl</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nlp.tests.BuildIdvVocabTests.test_set_idf_vocab_from_pkl" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="nlp.tests.WordCloudTests">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">nlp.tests.</span></code><code class="sig-name descname"><span class="pre">WordCloudTests</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nlp.tests.WordCloudTests" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.test.testcases.TestCase</span></code></p>
+<dl class="py method">
+<dt id="nlp.tests.WordCloudTests.test_remove_stop_words">
+<code class="sig-name descname"><span class="pre">test_remove_stop_words</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nlp.tests.WordCloudTests.test_remove_stop_words" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-nlp.tfidf">
+<span id="nlp-tfidf-module"></span><h2>nlp.tfidf module<a class="headerlink" href="#module-nlp.tfidf" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="nlp.tfidf.FreqWordExtract">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">nlp.tfidf.</span></code><code class="sig-name descname"><span class="pre">FreqWordExtract</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idf_vocab</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nlp.tfidf.FreqWordExtract" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="nlp.tfidf.FreqWordExtract.extract_keyword">
+<code class="sig-name descname"><span class="pre">extract_keyword</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">article</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">top_n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nlp.tfidf.FreqWordExtract.extract_keyword" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract keywords from an article based on tf-idf algorithm
+:param: article: a string representing the article
+:param: top_n: output top_n keywords sorted by their tf-idf value
+:param: threshold: only keywords whose scores are above threshold chosen as output
+:returns: a list of string, each element is a generated keyword
+:rtype: a list of string</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="nlp.tfidf.build_idf_vocab">
+<code class="sig-prename descclassname"><span class="pre">nlp.tfidf.</span></code><code class="sig-name descname"><span class="pre">build_idf_vocab</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">corpus</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nlp.tfidf.build_idf_vocab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build the inverse document frequency(idf) dictionary
+:param corpus: a list of string represent the articles to generate idf dict
+:returns: a dict that maps a word to its idf value
+:rtype: dict(string, float)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="nlp.tfidf.extract_from_json">
+<code class="sig-prename descclassname"><span class="pre">nlp.tfidf.</span></code><code class="sig-name descname"><span class="pre">extract_from_json</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nlp.tfidf.extract_from_json" title="Permalink to this definition">¶</a></dt>
+<dd><p>A helper function to extract data from KPTimes dataset in json format
+:param: json_str: the json string
+:param: verbose: bool, if logging the process of data processing
+:returns: the articles and keywords for each article
+:rtype: src (list of string), tgt (list of keyword list)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="nlp.tfidf.get_tf_vocab">
+<code class="sig-prename descclassname"><span class="pre">nlp.tfidf.</span></code><code class="sig-name descname"><span class="pre">get_tf_vocab</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">article</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nlp.tfidf.get_tf_vocab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build the term frequency(tf) dictionary for a given article
+:param article: a string, representing the article
+:returns: a dict that maps a word to its tf value
+:rtype: dict(string, float)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="nlp.tfidf.get_tfidf_score">
+<code class="sig-prename descclassname"><span class="pre">nlp.tfidf.</span></code><code class="sig-name descname"><span class="pre">get_tfidf_score</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tf_vocab</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">idf_vocab</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nlp.tfidf.get_tfidf_score" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the tfidf score for an article
+:param tf_vocab: a dict that maps a word into its tf value
+:param idf_vocab: a dict that maps a word into its idf value
+:returns: a list of tuple, where the first element is the word,</p>
+<blockquote>
+<div><p>the second element is its tf-idf score.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>a list of (str, float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="nlp.tfidf.read_lines">
+<code class="sig-prename descclassname"><span class="pre">nlp.tfidf.</span></code><code class="sig-name descname"><span class="pre">read_lines</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nlp.tfidf.read_lines" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="nlp.tfidf.setup_idf_vocab">
+<code class="sig-prename descclassname"><span class="pre">nlp.tfidf.</span></code><code class="sig-name descname"><span class="pre">setup_idf_vocab</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idf_vocab_pkl_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'nlp/data/idf_vocab.pkl'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">corpus_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'nlp/data/KPTimes.test.jsonl'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nlp.tfidf.setup_idf_vocab" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-nlp.views">
+<span id="nlp-views-module"></span><h2>nlp.views module<a class="headerlink" href="#module-nlp.views" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-nlp.word_cloud">
+<span id="nlp-word-cloud-module"></span><h2>nlp.word_cloud module<a class="headerlink" href="#module-nlp.word_cloud" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="nlp.word_cloud.plot_word_cloud">
+<code class="sig-prename descclassname"><span class="pre">nlp.word_cloud.</span></code><code class="sig-name descname"><span class="pre">plot_word_cloud</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">artcile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'figs/cloud.png'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nlp.word_cloud.plot_word_cloud" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot word cloud and save it to a local file
+:param: artcile: a string representing the article
+:param: target_path: the path to save word cloud figure
+:return: None</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="nlp.word_cloud.remove_stop_words">
+<code class="sig-prename descclassname"><span class="pre">nlp.word_cloud.</span></code><code class="sig-name descname"><span class="pre">remove_stop_words</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">article</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nlp.word_cloud.remove_stop_words" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove stop words from an article, as they should not be shown on the word cloud
+:param article: a string representing the article
+:returns: the filtered tokens for the input article
+:rtype: a list of string</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-nlp">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-nlp" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Blogalytics</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">nlp package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-nlp.admin">nlp.admin module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-nlp.apps">nlp.apps module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-nlp.models">nlp.models module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-nlp.tests">nlp.tests module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-nlp.tfidf">nlp.tfidf module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-nlp.views">nlp.views module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-nlp.word_cloud">nlp.word_cloud module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-nlp">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="blog.html">blog package</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to Blogalytics’s documentation!</a></li>
+      <li>Next: <a href="nlp.migrations.html" title="next chapter">nlp.migrations package</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Team15.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/nlp.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

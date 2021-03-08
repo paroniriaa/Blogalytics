@@ -1,0 +1,683 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>blog.migrations package &#8212; Blogalytics 1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="blog package" href="blog.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="blog-migrations-package">
+<h1>blog.migrations package<a class="headerlink" href="#blog-migrations-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-blog.migrations.0001_initial">
+<span id="blog-migrations-0001-initial-module"></span><h2>blog.migrations.0001_initial module<a class="headerlink" href="#module-blog.migrations.0001_initial" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="blog.migrations.0001_initial.Migration">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.migrations.0001_initial.</span></code><code class="sig-name descname"><span class="pre">Migration</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.migrations.0001_initial.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt id="blog.migrations.0001_initial.Migration.dependencies">
+<code class="sig-name descname"><span class="pre">dependencies</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[('auth',</span> <span class="pre">'__first__')]</span></em><a class="headerlink" href="#blog.migrations.0001_initial.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.migrations.0001_initial.Migration.initial">
+<code class="sig-name descname"><span class="pre">initial</span></code><em class="property"> <span class="pre">=</span> <span class="pre">True</span></em><a class="headerlink" href="#blog.migrations.0001_initial.Migration.initial" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.migrations.0001_initial.Migration.operations">
+<code class="sig-name descname"><span class="pre">operations</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[&lt;CreateModel</span>&#160; <span class="pre">name='Post',</span> <span class="pre">fields=[('id',</span> <span class="pre">&lt;django.db.models.fields.AutoField&gt;),</span> <span class="pre">('title',</span> <span class="pre">&lt;django.db.models.fields.CharField&gt;),</span> <span class="pre">('updated_on',</span> <span class="pre">&lt;django.db.models.fields.DateTimeField&gt;),</span> <span class="pre">('content',</span> <span class="pre">&lt;django.db.models.fields.TextField&gt;),</span> <span class="pre">('created_on',</span> <span class="pre">&lt;django.db.models.fields.DateTimeField&gt;),</span> <span class="pre">('status',</span> <span class="pre">&lt;django.db.models.fields.IntegerField&gt;),</span> <span class="pre">('author',</span> <span class="pre">&lt;django.db.models.fields.related.ForeignKey&gt;)],</span> <span class="pre">options={'ordering':</span> <span class="pre">['-created_on']}&gt;]</span></em><a class="headerlink" href="#blog.migrations.0001_initial.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-blog.migrations.0002_post_slug">
+<span id="blog-migrations-0002-post-slug-module"></span><h2>blog.migrations.0002_post_slug module<a class="headerlink" href="#module-blog.migrations.0002_post_slug" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="blog.migrations.0002_post_slug.Migration">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.migrations.0002_post_slug.</span></code><code class="sig-name descname"><span class="pre">Migration</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.migrations.0002_post_slug.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt id="blog.migrations.0002_post_slug.Migration.dependencies">
+<code class="sig-name descname"><span class="pre">dependencies</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[('blog',</span> <span class="pre">'0001_initial')]</span></em><a class="headerlink" href="#blog.migrations.0002_post_slug.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.migrations.0002_post_slug.Migration.operations">
+<code class="sig-name descname"><span class="pre">operations</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[&lt;AddField</span>&#160; <span class="pre">model_name='post',</span> <span class="pre">name='slug',</span> <span class="pre">field=&lt;django.db.models.fields.SlugField&gt;&gt;]</span></em><a class="headerlink" href="#blog.migrations.0002_post_slug.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-blog.migrations.0003_auto_20210115_1206">
+<span id="blog-migrations-0003-auto-20210115-1206-module"></span><h2>blog.migrations.0003_auto_20210115_1206 module<a class="headerlink" href="#module-blog.migrations.0003_auto_20210115_1206" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="blog.migrations.0003_auto_20210115_1206.Migration">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.migrations.0003_auto_20210115_1206.</span></code><code class="sig-name descname"><span class="pre">Migration</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.migrations.0003_auto_20210115_1206.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt id="blog.migrations.0003_auto_20210115_1206.Migration.dependencies">
+<code class="sig-name descname"><span class="pre">dependencies</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[('blog',</span> <span class="pre">'0002_post_slug')]</span></em><a class="headerlink" href="#blog.migrations.0003_auto_20210115_1206.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.migrations.0003_auto_20210115_1206.Migration.operations">
+<code class="sig-name descname"><span class="pre">operations</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[&lt;AlterField</span>&#160; <span class="pre">model_name='post',</span> <span class="pre">name='slug',</span> <span class="pre">field=&lt;django.db.models.fields.SlugField&gt;&gt;]</span></em><a class="headerlink" href="#blog.migrations.0003_auto_20210115_1206.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-blog.migrations.0004_post_post_id">
+<span id="blog-migrations-0004-post-post-id-module"></span><h2>blog.migrations.0004_post_post_id module<a class="headerlink" href="#module-blog.migrations.0004_post_post_id" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="blog.migrations.0004_post_post_id.Migration">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.migrations.0004_post_post_id.</span></code><code class="sig-name descname"><span class="pre">Migration</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.migrations.0004_post_post_id.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt id="blog.migrations.0004_post_post_id.Migration.dependencies">
+<code class="sig-name descname"><span class="pre">dependencies</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[('blog',</span> <span class="pre">'0003_auto_20210115_1206')]</span></em><a class="headerlink" href="#blog.migrations.0004_post_post_id.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.migrations.0004_post_post_id.Migration.operations">
+<code class="sig-name descname"><span class="pre">operations</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[&lt;AddField</span>&#160; <span class="pre">model_name='post',</span> <span class="pre">name='post_id',</span> <span class="pre">field=&lt;django.db.models.fields.UUIDField&gt;&gt;]</span></em><a class="headerlink" href="#blog.migrations.0004_post_post_id.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-blog.migrations.0005_auto_20210210_0426">
+<span id="blog-migrations-0005-auto-20210210-0426-module"></span><h2>blog.migrations.0005_auto_20210210_0426 module<a class="headerlink" href="#module-blog.migrations.0005_auto_20210210_0426" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="blog.migrations.0005_auto_20210210_0426.Migration">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.migrations.0005_auto_20210210_0426.</span></code><code class="sig-name descname"><span class="pre">Migration</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.migrations.0005_auto_20210210_0426.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt id="blog.migrations.0005_auto_20210210_0426.Migration.dependencies">
+<code class="sig-name descname"><span class="pre">dependencies</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[('blog',</span> <span class="pre">'0004_post_post_id')]</span></em><a class="headerlink" href="#blog.migrations.0005_auto_20210210_0426.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.migrations.0005_auto_20210210_0426.Migration.operations">
+<code class="sig-name descname"><span class="pre">operations</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[&lt;AlterField</span>&#160; <span class="pre">model_name='post',</span> <span class="pre">name='post_id',</span> <span class="pre">field=&lt;django.db.models.fields.UUIDField&gt;&gt;]</span></em><a class="headerlink" href="#blog.migrations.0005_auto_20210210_0426.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-blog.migrations.0006_post_likes">
+<span id="blog-migrations-0006-post-likes-module"></span><h2>blog.migrations.0006_post_likes module<a class="headerlink" href="#module-blog.migrations.0006_post_likes" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="blog.migrations.0006_post_likes.Migration">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.migrations.0006_post_likes.</span></code><code class="sig-name descname"><span class="pre">Migration</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.migrations.0006_post_likes.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt id="blog.migrations.0006_post_likes.Migration.dependencies">
+<code class="sig-name descname"><span class="pre">dependencies</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[('auth',</span> <span class="pre">'__first__'),</span> <span class="pre">('blog',</span> <span class="pre">'0005_auto_20210210_0426')]</span></em><a class="headerlink" href="#blog.migrations.0006_post_likes.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.migrations.0006_post_likes.Migration.operations">
+<code class="sig-name descname"><span class="pre">operations</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[&lt;AddField</span>&#160; <span class="pre">model_name='post',</span> <span class="pre">name='likes',</span> <span class="pre">field=&lt;django.db.models.fields.related.ManyToManyField&gt;&gt;]</span></em><a class="headerlink" href="#blog.migrations.0006_post_likes.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-blog.migrations.0007_auto_20210305_0539">
+<span id="blog-migrations-0007-auto-20210305-0539-module"></span><h2>blog.migrations.0007_auto_20210305_0539 module<a class="headerlink" href="#module-blog.migrations.0007_auto_20210305_0539" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="blog.migrations.0007_auto_20210305_0539.Migration">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.migrations.0007_auto_20210305_0539.</span></code><code class="sig-name descname"><span class="pre">Migration</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.migrations.0007_auto_20210305_0539.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt id="blog.migrations.0007_auto_20210305_0539.Migration.dependencies">
+<code class="sig-name descname"><span class="pre">dependencies</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[('blog',</span> <span class="pre">'0006_post_likes')]</span></em><a class="headerlink" href="#blog.migrations.0007_auto_20210305_0539.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.migrations.0007_auto_20210305_0539.Migration.operations">
+<code class="sig-name descname"><span class="pre">operations</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[&lt;AlterField</span>&#160; <span class="pre">model_name='post',</span> <span class="pre">name='content',</span> <span class="pre">field=&lt;ckeditor.fields.RichTextField&gt;&gt;]</span></em><a class="headerlink" href="#blog.migrations.0007_auto_20210305_0539.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-blog.migrations.0008_post_snippet">
+<span id="blog-migrations-0008-post-snippet-module"></span><h2>blog.migrations.0008_post_snippet module<a class="headerlink" href="#module-blog.migrations.0008_post_snippet" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="blog.migrations.0008_post_snippet.Migration">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.migrations.0008_post_snippet.</span></code><code class="sig-name descname"><span class="pre">Migration</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.migrations.0008_post_snippet.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt id="blog.migrations.0008_post_snippet.Migration.dependencies">
+<code class="sig-name descname"><span class="pre">dependencies</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[('blog',</span> <span class="pre">'0007_auto_20210305_0539')]</span></em><a class="headerlink" href="#blog.migrations.0008_post_snippet.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.migrations.0008_post_snippet.Migration.operations">
+<code class="sig-name descname"><span class="pre">operations</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[&lt;AddField</span>&#160; <span class="pre">model_name='post',</span> <span class="pre">name='snippet',</span> <span class="pre">field=&lt;django.db.models.fields.CharField&gt;&gt;]</span></em><a class="headerlink" href="#blog.migrations.0008_post_snippet.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-blog.migrations.0009_remove_post_status">
+<span id="blog-migrations-0009-remove-post-status-module"></span><h2>blog.migrations.0009_remove_post_status module<a class="headerlink" href="#module-blog.migrations.0009_remove_post_status" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="blog.migrations.0009_remove_post_status.Migration">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.migrations.0009_remove_post_status.</span></code><code class="sig-name descname"><span class="pre">Migration</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.migrations.0009_remove_post_status.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt id="blog.migrations.0009_remove_post_status.Migration.dependencies">
+<code class="sig-name descname"><span class="pre">dependencies</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[('blog',</span> <span class="pre">'0008_post_snippet')]</span></em><a class="headerlink" href="#blog.migrations.0009_remove_post_status.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.migrations.0009_remove_post_status.Migration.operations">
+<code class="sig-name descname"><span class="pre">operations</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[&lt;RemoveField</span>&#160; <span class="pre">model_name='post',</span> <span class="pre">name='status'&gt;]</span></em><a class="headerlink" href="#blog.migrations.0009_remove_post_status.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-blog.migrations.0010_auto_20210305_0629">
+<span id="blog-migrations-0010-auto-20210305-0629-module"></span><h2>blog.migrations.0010_auto_20210305_0629 module<a class="headerlink" href="#module-blog.migrations.0010_auto_20210305_0629" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="blog.migrations.0010_auto_20210305_0629.Migration">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.migrations.0010_auto_20210305_0629.</span></code><code class="sig-name descname"><span class="pre">Migration</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.migrations.0010_auto_20210305_0629.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt id="blog.migrations.0010_auto_20210305_0629.Migration.dependencies">
+<code class="sig-name descname"><span class="pre">dependencies</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[('blog',</span> <span class="pre">'0009_remove_post_status')]</span></em><a class="headerlink" href="#blog.migrations.0010_auto_20210305_0629.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.migrations.0010_auto_20210305_0629.Migration.operations">
+<code class="sig-name descname"><span class="pre">operations</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[&lt;AlterField</span>&#160; <span class="pre">model_name='post',</span> <span class="pre">name='snippet',</span> <span class="pre">field=&lt;django.db.models.fields.CharField&gt;&gt;]</span></em><a class="headerlink" href="#blog.migrations.0010_auto_20210305_0629.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-blog.migrations.0011_profile">
+<span id="blog-migrations-0011-profile-module"></span><h2>blog.migrations.0011_profile module<a class="headerlink" href="#module-blog.migrations.0011_profile" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="blog.migrations.0011_profile.Migration">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.migrations.0011_profile.</span></code><code class="sig-name descname"><span class="pre">Migration</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.migrations.0011_profile.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt id="blog.migrations.0011_profile.Migration.dependencies">
+<code class="sig-name descname"><span class="pre">dependencies</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[('auth',</span> <span class="pre">'__first__'),</span> <span class="pre">('blog',</span> <span class="pre">'0010_auto_20210305_0629')]</span></em><a class="headerlink" href="#blog.migrations.0011_profile.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.migrations.0011_profile.Migration.operations">
+<code class="sig-name descname"><span class="pre">operations</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[&lt;CreateModel</span>&#160; <span class="pre">name='Profile',</span> <span class="pre">fields=[('id',</span> <span class="pre">&lt;django.db.models.fields.AutoField&gt;),</span> <span class="pre">('user',</span> <span class="pre">&lt;django.db.models.fields.related.OneToOneField&gt;)]&gt;]</span></em><a class="headerlink" href="#blog.migrations.0011_profile.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-blog.migrations.0012_profile_bio">
+<span id="blog-migrations-0012-profile-bio-module"></span><h2>blog.migrations.0012_profile_bio module<a class="headerlink" href="#module-blog.migrations.0012_profile_bio" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="blog.migrations.0012_profile_bio.Migration">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.migrations.0012_profile_bio.</span></code><code class="sig-name descname"><span class="pre">Migration</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.migrations.0012_profile_bio.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt id="blog.migrations.0012_profile_bio.Migration.dependencies">
+<code class="sig-name descname"><span class="pre">dependencies</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[('blog',</span> <span class="pre">'0011_profile')]</span></em><a class="headerlink" href="#blog.migrations.0012_profile_bio.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.migrations.0012_profile_bio.Migration.operations">
+<code class="sig-name descname"><span class="pre">operations</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[&lt;AddField</span>&#160; <span class="pre">model_name='profile',</span> <span class="pre">name='bio',</span> <span class="pre">field=&lt;django.db.models.fields.TextField&gt;,</span> <span class="pre">preserve_default=False&gt;]</span></em><a class="headerlink" href="#blog.migrations.0012_profile_bio.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-blog.migrations.0013_profile_profile_pic">
+<span id="blog-migrations-0013-profile-profile-pic-module"></span><h2>blog.migrations.0013_profile_profile_pic module<a class="headerlink" href="#module-blog.migrations.0013_profile_profile_pic" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="blog.migrations.0013_profile_profile_pic.Migration">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.migrations.0013_profile_profile_pic.</span></code><code class="sig-name descname"><span class="pre">Migration</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.migrations.0013_profile_profile_pic.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt id="blog.migrations.0013_profile_profile_pic.Migration.dependencies">
+<code class="sig-name descname"><span class="pre">dependencies</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[('blog',</span> <span class="pre">'0012_profile_bio')]</span></em><a class="headerlink" href="#blog.migrations.0013_profile_profile_pic.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.migrations.0013_profile_profile_pic.Migration.operations">
+<code class="sig-name descname"><span class="pre">operations</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[&lt;AddField</span>&#160; <span class="pre">model_name='profile',</span> <span class="pre">name='profile_pic',</span> <span class="pre">field=&lt;django.db.models.fields.files.ImageField&gt;&gt;]</span></em><a class="headerlink" href="#blog.migrations.0013_profile_profile_pic.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-blog.migrations.0014_auto_20210305_1351">
+<span id="blog-migrations-0014-auto-20210305-1351-module"></span><h2>blog.migrations.0014_auto_20210305_1351 module<a class="headerlink" href="#module-blog.migrations.0014_auto_20210305_1351" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="blog.migrations.0014_auto_20210305_1351.Migration">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.migrations.0014_auto_20210305_1351.</span></code><code class="sig-name descname"><span class="pre">Migration</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.migrations.0014_auto_20210305_1351.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt id="blog.migrations.0014_auto_20210305_1351.Migration.dependencies">
+<code class="sig-name descname"><span class="pre">dependencies</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[('blog',</span> <span class="pre">'0013_profile_profile_pic')]</span></em><a class="headerlink" href="#blog.migrations.0014_auto_20210305_1351.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.migrations.0014_auto_20210305_1351.Migration.operations">
+<code class="sig-name descname"><span class="pre">operations</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[&lt;AlterField</span>&#160; <span class="pre">model_name='profile',</span> <span class="pre">name='profile_pic',</span> <span class="pre">field=&lt;django.db.models.fields.files.ImageField&gt;&gt;]</span></em><a class="headerlink" href="#blog.migrations.0014_auto_20210305_1351.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-blog.migrations.0015_post_header_image">
+<span id="blog-migrations-0015-post-header-image-module"></span><h2>blog.migrations.0015_post_header_image module<a class="headerlink" href="#module-blog.migrations.0015_post_header_image" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="blog.migrations.0015_post_header_image.Migration">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.migrations.0015_post_header_image.</span></code><code class="sig-name descname"><span class="pre">Migration</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.migrations.0015_post_header_image.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt id="blog.migrations.0015_post_header_image.Migration.dependencies">
+<code class="sig-name descname"><span class="pre">dependencies</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[('blog',</span> <span class="pre">'0014_auto_20210305_1351')]</span></em><a class="headerlink" href="#blog.migrations.0015_post_header_image.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.migrations.0015_post_header_image.Migration.operations">
+<code class="sig-name descname"><span class="pre">operations</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[&lt;AddField</span>&#160; <span class="pre">model_name='post',</span> <span class="pre">name='header_image',</span> <span class="pre">field=&lt;django.db.models.fields.files.ImageField&gt;&gt;]</span></em><a class="headerlink" href="#blog.migrations.0015_post_header_image.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-blog.migrations.0016_auto_20210305_1453">
+<span id="blog-migrations-0016-auto-20210305-1453-module"></span><h2>blog.migrations.0016_auto_20210305_1453 module<a class="headerlink" href="#module-blog.migrations.0016_auto_20210305_1453" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="blog.migrations.0016_auto_20210305_1453.Migration">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.migrations.0016_auto_20210305_1453.</span></code><code class="sig-name descname"><span class="pre">Migration</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.migrations.0016_auto_20210305_1453.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt id="blog.migrations.0016_auto_20210305_1453.Migration.dependencies">
+<code class="sig-name descname"><span class="pre">dependencies</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[('blog',</span> <span class="pre">'0015_post_header_image')]</span></em><a class="headerlink" href="#blog.migrations.0016_auto_20210305_1453.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.migrations.0016_auto_20210305_1453.Migration.operations">
+<code class="sig-name descname"><span class="pre">operations</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[&lt;AlterField</span>&#160; <span class="pre">model_name='profile',</span> <span class="pre">name='bio',</span> <span class="pre">field=&lt;django.db.models.fields.TextField&gt;&gt;]</span></em><a class="headerlink" href="#blog.migrations.0016_auto_20210305_1453.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-blog.migrations.0017_auto_20210306_0403">
+<span id="blog-migrations-0017-auto-20210306-0403-module"></span><h2>blog.migrations.0017_auto_20210306_0403 module<a class="headerlink" href="#module-blog.migrations.0017_auto_20210306_0403" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="blog.migrations.0017_auto_20210306_0403.Migration">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.migrations.0017_auto_20210306_0403.</span></code><code class="sig-name descname"><span class="pre">Migration</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.migrations.0017_auto_20210306_0403.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt id="blog.migrations.0017_auto_20210306_0403.Migration.dependencies">
+<code class="sig-name descname"><span class="pre">dependencies</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[('blog',</span> <span class="pre">'0016_auto_20210305_1453')]</span></em><a class="headerlink" href="#blog.migrations.0017_auto_20210306_0403.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.migrations.0017_auto_20210306_0403.Migration.operations">
+<code class="sig-name descname"><span class="pre">operations</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[&lt;AlterField</span>&#160; <span class="pre">model_name='profile',</span> <span class="pre">name='bio',</span> <span class="pre">field=&lt;django.db.models.fields.TextField&gt;&gt;]</span></em><a class="headerlink" href="#blog.migrations.0017_auto_20210306_0403.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-blog.migrations.0018_auto_20210306_0412">
+<span id="blog-migrations-0018-auto-20210306-0412-module"></span><h2>blog.migrations.0018_auto_20210306_0412 module<a class="headerlink" href="#module-blog.migrations.0018_auto_20210306_0412" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="blog.migrations.0018_auto_20210306_0412.Migration">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.migrations.0018_auto_20210306_0412.</span></code><code class="sig-name descname"><span class="pre">Migration</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.migrations.0018_auto_20210306_0412.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt id="blog.migrations.0018_auto_20210306_0412.Migration.dependencies">
+<code class="sig-name descname"><span class="pre">dependencies</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[('blog',</span> <span class="pre">'0017_auto_20210306_0403')]</span></em><a class="headerlink" href="#blog.migrations.0018_auto_20210306_0412.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.migrations.0018_auto_20210306_0412.Migration.operations">
+<code class="sig-name descname"><span class="pre">operations</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[&lt;AlterField</span>&#160; <span class="pre">model_name='post',</span> <span class="pre">name='content',</span> <span class="pre">field=&lt;django.db.models.fields.TextField&gt;&gt;]</span></em><a class="headerlink" href="#blog.migrations.0018_auto_20210306_0412.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-blog.migrations.0019_auto_20210306_0413">
+<span id="blog-migrations-0019-auto-20210306-0413-module"></span><h2>blog.migrations.0019_auto_20210306_0413 module<a class="headerlink" href="#module-blog.migrations.0019_auto_20210306_0413" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="blog.migrations.0019_auto_20210306_0413.Migration">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.migrations.0019_auto_20210306_0413.</span></code><code class="sig-name descname"><span class="pre">Migration</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.migrations.0019_auto_20210306_0413.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt id="blog.migrations.0019_auto_20210306_0413.Migration.dependencies">
+<code class="sig-name descname"><span class="pre">dependencies</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[('blog',</span> <span class="pre">'0018_auto_20210306_0412')]</span></em><a class="headerlink" href="#blog.migrations.0019_auto_20210306_0413.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.migrations.0019_auto_20210306_0413.Migration.operations">
+<code class="sig-name descname"><span class="pre">operations</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[&lt;AlterField</span>&#160; <span class="pre">model_name='post',</span> <span class="pre">name='content',</span> <span class="pre">field=&lt;django.db.models.fields.TextField&gt;&gt;]</span></em><a class="headerlink" href="#blog.migrations.0019_auto_20210306_0413.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-blog.migrations.0020_auto_20210305_2026">
+<span id="blog-migrations-0020-auto-20210305-2026-module"></span><h2>blog.migrations.0020_auto_20210305_2026 module<a class="headerlink" href="#module-blog.migrations.0020_auto_20210305_2026" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="blog.migrations.0020_auto_20210305_2026.Migration">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.migrations.0020_auto_20210305_2026.</span></code><code class="sig-name descname"><span class="pre">Migration</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.migrations.0020_auto_20210305_2026.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt id="blog.migrations.0020_auto_20210305_2026.Migration.dependencies">
+<code class="sig-name descname"><span class="pre">dependencies</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[('blog',</span> <span class="pre">'0019_auto_20210306_0413')]</span></em><a class="headerlink" href="#blog.migrations.0020_auto_20210305_2026.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.migrations.0020_auto_20210305_2026.Migration.operations">
+<code class="sig-name descname"><span class="pre">operations</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[&lt;RemoveField</span>&#160; <span class="pre">model_name='post',</span> <span class="pre">name='snippet'&gt;,</span> <span class="pre">&lt;AlterField</span>&#160; <span class="pre">model_name='post',</span> <span class="pre">name='content',</span> <span class="pre">field=&lt;django.db.models.fields.TextField&gt;&gt;]</span></em><a class="headerlink" href="#blog.migrations.0020_auto_20210305_2026.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-blog.migrations.0020_auto_20210306_0429">
+<span id="blog-migrations-0020-auto-20210306-0429-module"></span><h2>blog.migrations.0020_auto_20210306_0429 module<a class="headerlink" href="#module-blog.migrations.0020_auto_20210306_0429" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="blog.migrations.0020_auto_20210306_0429.Migration">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.migrations.0020_auto_20210306_0429.</span></code><code class="sig-name descname"><span class="pre">Migration</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.migrations.0020_auto_20210306_0429.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt id="blog.migrations.0020_auto_20210306_0429.Migration.dependencies">
+<code class="sig-name descname"><span class="pre">dependencies</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[('blog',</span> <span class="pre">'0019_auto_20210306_0413')]</span></em><a class="headerlink" href="#blog.migrations.0020_auto_20210306_0429.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.migrations.0020_auto_20210306_0429.Migration.operations">
+<code class="sig-name descname"><span class="pre">operations</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[&lt;AlterField</span>&#160; <span class="pre">model_name='profile',</span> <span class="pre">name='profile_pic',</span> <span class="pre">field=&lt;django.db.models.fields.files.ImageField&gt;&gt;]</span></em><a class="headerlink" href="#blog.migrations.0020_auto_20210306_0429.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-blog.migrations.0021_merge_20210305_2053">
+<span id="blog-migrations-0021-merge-20210305-2053-module"></span><h2>blog.migrations.0021_merge_20210305_2053 module<a class="headerlink" href="#module-blog.migrations.0021_merge_20210305_2053" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="blog.migrations.0021_merge_20210305_2053.Migration">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.migrations.0021_merge_20210305_2053.</span></code><code class="sig-name descname"><span class="pre">Migration</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.migrations.0021_merge_20210305_2053.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt id="blog.migrations.0021_merge_20210305_2053.Migration.dependencies">
+<code class="sig-name descname"><span class="pre">dependencies</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[('blog',</span> <span class="pre">'0020_auto_20210306_0429'),</span> <span class="pre">('blog',</span> <span class="pre">'0020_auto_20210305_2026')]</span></em><a class="headerlink" href="#blog.migrations.0021_merge_20210305_2053.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.migrations.0021_merge_20210305_2053.Migration.operations">
+<code class="sig-name descname"><span class="pre">operations</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[]</span></em><a class="headerlink" href="#blog.migrations.0021_merge_20210305_2053.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-blog.migrations.0022_auto_20210306_0549">
+<span id="blog-migrations-0022-auto-20210306-0549-module"></span><h2>blog.migrations.0022_auto_20210306_0549 module<a class="headerlink" href="#module-blog.migrations.0022_auto_20210306_0549" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="blog.migrations.0022_auto_20210306_0549.Migration">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.migrations.0022_auto_20210306_0549.</span></code><code class="sig-name descname"><span class="pre">Migration</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.migrations.0022_auto_20210306_0549.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt id="blog.migrations.0022_auto_20210306_0549.Migration.dependencies">
+<code class="sig-name descname"><span class="pre">dependencies</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[('blog',</span> <span class="pre">'0021_merge_20210305_2053')]</span></em><a class="headerlink" href="#blog.migrations.0022_auto_20210306_0549.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.migrations.0022_auto_20210306_0549.Migration.operations">
+<code class="sig-name descname"><span class="pre">operations</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[&lt;AlterField</span>&#160; <span class="pre">model_name='profile',</span> <span class="pre">name='bio',</span> <span class="pre">field=&lt;django.db.models.fields.TextField&gt;&gt;]</span></em><a class="headerlink" href="#blog.migrations.0022_auto_20210306_0549.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-blog.migrations.0023_auto_20210306_1647">
+<span id="blog-migrations-0023-auto-20210306-1647-module"></span><h2>blog.migrations.0023_auto_20210306_1647 module<a class="headerlink" href="#module-blog.migrations.0023_auto_20210306_1647" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="blog.migrations.0023_auto_20210306_1647.Migration">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.migrations.0023_auto_20210306_1647.</span></code><code class="sig-name descname"><span class="pre">Migration</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.migrations.0023_auto_20210306_1647.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt id="blog.migrations.0023_auto_20210306_1647.Migration.dependencies">
+<code class="sig-name descname"><span class="pre">dependencies</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[('blog',</span> <span class="pre">'0022_auto_20210306_0549')]</span></em><a class="headerlink" href="#blog.migrations.0023_auto_20210306_1647.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.migrations.0023_auto_20210306_1647.Migration.operations">
+<code class="sig-name descname"><span class="pre">operations</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[&lt;AlterField</span>&#160; <span class="pre">model_name='profile',</span> <span class="pre">name='bio',</span> <span class="pre">field=&lt;django.db.models.fields.TextField&gt;&gt;]</span></em><a class="headerlink" href="#blog.migrations.0023_auto_20210306_1647.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-blog.migrations.0023_element_heatmap_page">
+<span id="blog-migrations-0023-element-heatmap-page-module"></span><h2>blog.migrations.0023_element_heatmap_page module<a class="headerlink" href="#module-blog.migrations.0023_element_heatmap_page" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="blog.migrations.0023_element_heatmap_page.Migration">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.migrations.0023_element_heatmap_page.</span></code><code class="sig-name descname"><span class="pre">Migration</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.migrations.0023_element_heatmap_page.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt id="blog.migrations.0023_element_heatmap_page.Migration.dependencies">
+<code class="sig-name descname"><span class="pre">dependencies</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[('blog',</span> <span class="pre">'0022_auto_20210306_0549')]</span></em><a class="headerlink" href="#blog.migrations.0023_element_heatmap_page.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.migrations.0023_element_heatmap_page.Migration.operations">
+<code class="sig-name descname"><span class="pre">operations</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[&lt;CreateModel</span>&#160; <span class="pre">name='Page',</span> <span class="pre">fields=[('id',</span> <span class="pre">&lt;django.db.models.fields.AutoField&gt;),</span> <span class="pre">('url',</span> <span class="pre">&lt;django.db.models.fields.URLField&gt;),</span> <span class="pre">('width',</span> <span class="pre">&lt;django.db.models.fields.IntegerField&gt;),</span> <span class="pre">('height',</span> <span class="pre">&lt;django.db.models.fields.IntegerField&gt;)]&gt;,</span> <span class="pre">&lt;CreateModel</span>&#160; <span class="pre">name='HeatMap',</span> <span class="pre">fields=[('id',</span> <span class="pre">&lt;django.db.models.fields.AutoField&gt;),</span> <span class="pre">('name',</span> <span class="pre">&lt;django.db.models.fields.TextField&gt;),</span> <span class="pre">('x_coord',</span> <span class="pre">&lt;django.db.models.fields.TextField&gt;),</span> <span class="pre">('y_coord',</span> <span class="pre">&lt;django.db.models.fields.TextField&gt;),</span> <span class="pre">('file',</span> <span class="pre">&lt;django.db.models.fields.CharField&gt;),</span> <span class="pre">('url',</span> <span class="pre">&lt;django.db.models.fields.related.ForeignKey&gt;)]&gt;,</span> <span class="pre">&lt;CreateModel</span>&#160; <span class="pre">name='Element',</span> <span class="pre">fields=[('id',</span> <span class="pre">&lt;django.db.models.fields.AutoField&gt;),</span> <span class="pre">('x',</span> <span class="pre">&lt;django.db.models.fields.IntegerField&gt;),</span> <span class="pre">('y',</span> <span class="pre">&lt;django.db.models.fields.IntegerField&gt;),</span> <span class="pre">('width',</span> <span class="pre">&lt;django.db.models.fields.IntegerField&gt;),</span> <span class="pre">('height',</span> <span class="pre">&lt;django.db.models.fields.IntegerField&gt;),</span> <span class="pre">('time_spent',</span> <span class="pre">&lt;django.db.models.fields.IntegerField&gt;),</span> <span class="pre">('url',</span> <span class="pre">&lt;django.db.models.fields.related.ForeignKey&gt;)]&gt;]</span></em><a class="headerlink" href="#blog.migrations.0023_element_heatmap_page.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-blog.migrations.0024_auto_20210307_0307">
+<span id="blog-migrations-0024-auto-20210307-0307-module"></span><h2>blog.migrations.0024_auto_20210307_0307 module<a class="headerlink" href="#module-blog.migrations.0024_auto_20210307_0307" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="blog.migrations.0024_auto_20210307_0307.Migration">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.migrations.0024_auto_20210307_0307.</span></code><code class="sig-name descname"><span class="pre">Migration</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.migrations.0024_auto_20210307_0307.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt id="blog.migrations.0024_auto_20210307_0307.Migration.dependencies">
+<code class="sig-name descname"><span class="pre">dependencies</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[('blog',</span> <span class="pre">'0023_element_heatmap_page')]</span></em><a class="headerlink" href="#blog.migrations.0024_auto_20210307_0307.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.migrations.0024_auto_20210307_0307.Migration.operations">
+<code class="sig-name descname"><span class="pre">operations</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[&lt;RemoveField</span>&#160; <span class="pre">model_name='heatmap',</span> <span class="pre">name='id'&gt;,</span> <span class="pre">&lt;AlterField</span>&#160; <span class="pre">model_name='heatmap',</span> <span class="pre">name='name',</span> <span class="pre">field=&lt;django.db.models.fields.TextField&gt;&gt;]</span></em><a class="headerlink" href="#blog.migrations.0024_auto_20210307_0307.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-blog.migrations.0025_merge_20210307_2231">
+<span id="blog-migrations-0025-merge-20210307-2231-module"></span><h2>blog.migrations.0025_merge_20210307_2231 module<a class="headerlink" href="#module-blog.migrations.0025_merge_20210307_2231" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="blog.migrations.0025_merge_20210307_2231.Migration">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.migrations.0025_merge_20210307_2231.</span></code><code class="sig-name descname"><span class="pre">Migration</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.migrations.0025_merge_20210307_2231.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt id="blog.migrations.0025_merge_20210307_2231.Migration.dependencies">
+<code class="sig-name descname"><span class="pre">dependencies</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[('blog',</span> <span class="pre">'0024_auto_20210307_0307'),</span> <span class="pre">('blog',</span> <span class="pre">'0023_auto_20210306_1647')]</span></em><a class="headerlink" href="#blog.migrations.0025_merge_20210307_2231.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.migrations.0025_merge_20210307_2231.Migration.operations">
+<code class="sig-name descname"><span class="pre">operations</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[]</span></em><a class="headerlink" href="#blog.migrations.0025_merge_20210307_2231.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-blog.migrations.0026_auto_20210307_2231">
+<span id="blog-migrations-0026-auto-20210307-2231-module"></span><h2>blog.migrations.0026_auto_20210307_2231 module<a class="headerlink" href="#module-blog.migrations.0026_auto_20210307_2231" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="blog.migrations.0026_auto_20210307_2231.Migration">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.migrations.0026_auto_20210307_2231.</span></code><code class="sig-name descname"><span class="pre">Migration</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.migrations.0026_auto_20210307_2231.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt id="blog.migrations.0026_auto_20210307_2231.Migration.dependencies">
+<code class="sig-name descname"><span class="pre">dependencies</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[('blog',</span> <span class="pre">'0025_merge_20210307_2231')]</span></em><a class="headerlink" href="#blog.migrations.0026_auto_20210307_2231.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.migrations.0026_auto_20210307_2231.Migration.operations">
+<code class="sig-name descname"><span class="pre">operations</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[&lt;AlterField</span>&#160; <span class="pre">model_name='profile',</span> <span class="pre">name='bio',</span> <span class="pre">field=&lt;django.db.models.fields.TextField&gt;&gt;]</span></em><a class="headerlink" href="#blog.migrations.0026_auto_20210307_2231.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-blog.migrations.0027_auto_20210307_2302">
+<span id="blog-migrations-0027-auto-20210307-2302-module"></span><h2>blog.migrations.0027_auto_20210307_2302 module<a class="headerlink" href="#module-blog.migrations.0027_auto_20210307_2302" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="blog.migrations.0027_auto_20210307_2302.Migration">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">blog.migrations.0027_auto_20210307_2302.</span></code><code class="sig-name descname"><span class="pre">Migration</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.migrations.0027_auto_20210307_2302.Migration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">django.db.migrations.migration.Migration</span></code></p>
+<dl class="py attribute">
+<dt id="blog.migrations.0027_auto_20210307_2302.Migration.dependencies">
+<code class="sig-name descname"><span class="pre">dependencies</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[('blog',</span> <span class="pre">'0026_auto_20210307_2231')]</span></em><a class="headerlink" href="#blog.migrations.0027_auto_20210307_2302.Migration.dependencies" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="blog.migrations.0027_auto_20210307_2302.Migration.operations">
+<code class="sig-name descname"><span class="pre">operations</span></code><em class="property"> <span class="pre">=</span> <span class="pre">[&lt;AlterField</span>&#160; <span class="pre">model_name='profile',</span> <span class="pre">name='bio',</span> <span class="pre">field=&lt;django.db.models.fields.TextField&gt;&gt;]</span></em><a class="headerlink" href="#blog.migrations.0027_auto_20210307_2302.Migration.operations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-blog.migrations">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-blog.migrations" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Blogalytics</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="nlp.html">nlp package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="blog.html">blog package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="blog.html#subpackages">Subpackages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blog.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blog.html#module-blog.admin">blog.admin module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blog.html#module-blog.apps">blog.apps module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blog.html#module-blog.forms">blog.forms module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blog.html#module-blog.models">blog.models module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blog.html#module-blog.tests">blog.tests module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blog.html#module-blog.urls">blog.urls module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blog.html#module-blog.views">blog.views module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blog.html#module-blog">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="blog.html">blog package</a><ul>
+      <li>Previous: <a href="blog.html" title="previous chapter">blog package</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Team15.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/blog.migrations.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
