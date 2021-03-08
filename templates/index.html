@@ -38,30 +38,30 @@
                       </a>
                       <p class="post-meta">Posted by {{ post.author }}, {{ post.created_on }}</p>
                   </div>
-<form style="text-align: right;"> 
-                  <input type="button" class="btn btn-primary" value="show word cloud" id="{{ post.title }}" onclick="updateButton(this)">
-                </form>
-        <img src="{% static "" %}img/{{ post.title }}.png" id="{{ post.title }}.png" style='display:none' width="240px" hight="300px">
+                  <form style="text-align: right;"> 
+                    <input type="button" class="btn btn-primary" value="show word cloud" id="{{ post.title }}" onclick="updateButton(this)">
+                  </form>
+              <img src="{% static "" %}img/{{ post.title }}.png" id="{{ post.title }}.png" style='display:none' width="240px" hight="300px">
                 <p title="word cloud" id="{{ post.title }}" style="text-align: right;"></p>
                   <hr>
               {% endfor %}
-<script> 
-              const para = document.querySelectorAll("p[title='word cloud']");
-	function reP(iid){
-	id = iid + ".png" 
-	document.getElementById(id).style.display = "block";
-	}
-	function hiP(iid){
-	id = iid + ".png" 
-	document.getElementById(id).style.display = "none";
-	}
+              <script> 
+                const para = document.querySelectorAll("p[title='word cloud']");
+                function reP(iid){
+                id = iid + ".png" 
+                document.getElementById(id).style.display = "block";
+                }
+                function hiP(iid){
+                id = iid + ".png" 
+                document.getElementById(id).style.display = "none";
+                }
 
               function updateButton(element){
                 if(element.value === "show word cloud"){
                   element.value = "hide word cloud";
                   for(let i = 0; i < para.length; i++){
                     if(para[i].id == element.id)
-				reP(element.id);
+			              reP(element.id);
                   }
                 }else{
                   element.value = "show word cloud";

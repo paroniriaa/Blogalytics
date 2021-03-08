@@ -41,16 +41,17 @@
         {% endif %}
         <!-- <p class=" text-muted">{{ post.author }} | {{ post.created_on }}</p> -->
         <p class="card-text ">{{ post.content | linebreaks | safe }}</p>
-        <br>
-        <br>
         <form action="{% url 'like_post' post.slug %}" method="POST">
           {% csrf_token %}
           <div clas = "clearfix">
-          <button class="btn btn-primary float-left" type="submit", name="post_id", value="{{ post.id }}", class="btn btn-primary btn-sm">
-            Like {{ total_likes }}
+          <button class="btn btn-primary float-right" type="submit", name="post_id", value="{{ post.id }}", class="btn btn-primary btn-sm">
+            {{ total_likes }} Like 
           </button>
         </div>
         </form>
+        <br>
+        <br>
+        <br>
 <a class="btn btn-primary float-right" href="{% static "" %}img/{{ post.title }}.png">See Word Cloud</a>
         <button class="btn btn-primary float-middle" title="Not" onclick="showimage(this)">Generate Heat Map</button>
         <script>
