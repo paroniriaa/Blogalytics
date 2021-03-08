@@ -1,20 +1,25 @@
 import time
 from django.test import TestCase
+from django.test import Client
 from django.contrib.auth.models import User
 from .models import Post
 from django.urls import reverse
 
 # Create your tests here.
 
+# helper-function of create user and post
 def create_user():
     user = User.objects.create_user(username="test_name", email="test_email@mail.com", password="test_password")
     return user
 
 def create_post(user, title, content):  
-    post = Post.objects.create(title=title, content=content, author=user, status=1)
+    post = Post.objects.create(title=title, content=content, author=user)
     return post
 
 class PostModelTests(TestCase):
+    """
+    Post model test cases.
+    """
     @classmethod
     def setUpTestData(self):
         self.user = create_user()      
@@ -42,10 +47,6 @@ class PostModelTests(TestCase):
         post = Post.objects.get(id=1)
         self.assertEqual(post.author.username, self.post.author.username)
     
-    def test_status(self):
-        post = Post.objects.get(id=1)
-        self.assertEqual(post.status, self.post.status)
-
     def test_get_absolute_url(self):
         post = Post.objects.get(id=1)
         self.assertEqual(post.get_absolute_url(), self.post.get_absolute_url())
@@ -53,8 +54,10 @@ class PostModelTests(TestCase):
 
 
 class PostPostListTests(TestCase):
-
-    def test_accessability(self):
+    """
+    Home page and base page test cases.
+    """
+    def test_accessability_home(self):
         response = self.client.get(reverse('home'))
         self.assertEqual(response.status_code, 200)
 
@@ -63,9 +66,14 @@ class PostPostListTests(TestCase):
         response = self.client.get(reverse('about'), follow=True)
         self.assertEqual(response.status_code, 200)
 
-    def test_redirect_accessability_add_post(self):
+    def test_redirect_accessability_register(self):
         self.client.get(reverse('home'))
-        response = self.client.get(reverse('add_post'), follow=True)
+        response = self.client.get(reverse('register'), follow=True)
+        self.assertEqual(response.status_code, 200)
+    
+    def test_redirect_accessability_login(self):
+        self.client.get(reverse('home'))
+        response = self.client.get(reverse('login'), follow=True)
         self.assertEqual(response.status_code, 200)
 
     def test_html_template_correstness(self):
@@ -112,6 +120,9 @@ class PostPostListTests(TestCase):
 
 
 class PostPostDetailTests(TestCase):
+    """
+    View post page test cases.
+    """
     @classmethod
     def setUpTestData(self):
         self.user = create_user()      
@@ -139,7 +150,9 @@ class PostPostDetailTests(TestCase):
 
 
 class PostAboutViewTests(TestCase):
-
+    """
+    About page test cases.
+    """
     def test_accessability(self):
         response = self.client.get(reverse('about'))
         self.assertEqual(response.status_code, 200)
@@ -159,31 +172,6 @@ class PostAboutViewTests(TestCase):
         self.assertContains(response, "As you have already known, Blogalytics is a blog platform.")
 
 
-
-class PostAddPostViewTests(TestCase):
-    
-    def test_add_post_functionaility(self):
-        user = create_user()
-        new_post_info = {
-            'title' : 'new post title',
-            'slug' : 'new post slug',
-            'content' : "new post content",
-            'author' : user.username,
-            'status' : 1
-        }
-
-        response = self.client.post(reverse('add_post'), post_form=new_post_info)
-        # print(response.content)
-        self.assertEqual(response.status_code, 200)
-        #self.assertContains(response, "new post content")
-        #post = Post.objects.get(id=1)
-        
-        #self.assertEqual(post.title, new_post_info.title)
-        #post = Post.objects.get(id=1)
-        #self.assertFormError(response, post.is_valid())
-
-        #self.assertEqual(response.status_code, 200)
-        #self.assertQuerysetEqual(response.context['post_list'], [])
 
 
 
