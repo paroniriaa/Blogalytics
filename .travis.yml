@@ -17,6 +17,4 @@ script:
         - python manage.py makemigrations
         - echo 'Migrate'
         - python manage.py migrate
-        
-test:
         - python manage.py test -v 2
