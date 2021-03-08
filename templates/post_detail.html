@@ -41,6 +41,7 @@
         {% endif %}
         <!-- <p class=" text-muted">{{ post.author }} | {{ post.created_on }}</p> -->
         <p class="card-text ">{{ post.content | linebreaks | safe }}</p>
+        <br>
         <form action="{% url 'like_post' post.slug %}" method="POST">
           {% csrf_token %}
           <div clas = "clearfix">
@@ -52,7 +53,7 @@
         <br>
         <br>
         <br>
-<a class="btn btn-primary float-right" href="{% static "" %}img/{{ post.title }}.png">See Word Cloud</a>
+        <a class="btn btn-primary float-right" href="{% static "" %}img/{{ post.title }}.png">See Word Cloud</a>
         <button class="btn btn-primary float-middle" title="Not" onclick="showimage(this)">Generate Heat Map</button>
         <script>
           function showimage(element){
