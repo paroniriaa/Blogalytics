@@ -31,6 +31,8 @@ pytz==2021.1
 requests==2.25.1   
 setuptools==40.8.0   
 six==1.15.0   
+sklearn
+six==1.15.0 
 smart-open==3.0.0    
 spacy==2.3.5    
 spacy-legacy==3.0.1    
