@@ -18,3 +18,4 @@ script:
         - echo 'Migrate'
         - python manage.py migrate
         - python manage.py test -v 2
+        - python manage.py test nlp
