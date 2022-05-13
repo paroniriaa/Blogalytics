@@ -1,5 +1,5 @@
 ## Porject Intro:
-I Corporate with teammates to design, implement, test, and maintain a web blog platform which integrated with analytic tools such as NLP in machine learning to generate unique text visualization image(word cloud) for each blog to empower users to preview its content by its word cloud; and frontend mouse tracker to capture user behaviors on the blog page then produce behavioral heatmap to help user better analysis its reader’s preference. 
+I corporate with teammates to design, implement, test, and maintain a web blog platform which integrated with analytic tools such as NLP in machine learning to generate unique text visualization image(word cloud) for each blog to empower users to preview its content by its word cloud; and frontend mouse tracker to capture user behaviors on the blog page then produce behavioral heatmap to help user better analysis its reader’s preference. 
 
 
 ## Porject Summary:
