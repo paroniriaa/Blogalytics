@@ -1,6 +1,12 @@
 ## Porject Intro:
 I corporate with teammates to design, implement, test, and maintain a web blog platform which integrated with analytic tools such as NLP in machine learning to generate unique text visualization image(word cloud) for each blog to empower users to preview its content by its word cloud; and frontend mouse tracker to capture user behaviors on the blog page then produce behavioral heatmap to help user better analysis its reader’s preference. 
 
+## Porject Screenshots
+
+![home page](https://user-images.githubusercontent.com/44891450/168226365-33a9d39a-62b4-47b4-9807-e2ebc5693a66.png)
+
+![about page](https://user-images.githubusercontent.com/44891450/168226438-32262d38-0c5d-4383-bd81-93481f02df13.png)
+
 
 ## Porject Summary:
 • I am heavily responsible for developing the frontend and backend of the web application infrastructure along with the automatic testing, such as views and GUI elements on every HTML page, and most of the fundamental backend blog platform functionality including but not limited to: pages of home, about, user profile; post, search, view, edit, and delete blogs.
